@@ -1,4145 +1,1470 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>IELTS Grammar Guide: Band 8+ Writing</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        body {
-
-            font-family: 'Inter', sans-serif;
-
-            background-color: #f8fafc; /* bg-slate-50 */
-
-            color: #1e293b; /* text-slate-800 */
-
-            line-height: 1.6;
-
-            transition: margin-left 0.5s; /* Smooth transition for content shift */
-
-        }
-
-        body.no-scroll {
-
-            overflow: hidden; /* Prevent scrolling when sidebar is open on small screens */
-
-        }
-
-        .container {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            padding: 1.5rem;
-
-        }
-
-        .section-heading {
-
-            font-size: 2.25rem; /* text-4xl */
-
-            font-weight: 700; /* font-bold */
-
-            color: #0f172a; /* text-slate-900 */
-
-            margin-bottom: 1.5rem;
-
-            border-bottom: 2px solid #e2e8f0; /* border-slate-200 */
-
-            padding-bottom: 0.75rem;
-
-        }
-
-        .sub-section-heading {
-
-            font-size: 1.75rem; /* text-3xl */
-
-            font-weight: 600; /* font-semibold */
-
-            color: #1e293b; /* text-slate-800 */
-
-            margin-top: 2rem;
-
-            margin-bottom: 1rem;
-
-        }
-
-        .sub-sub-section-heading {
-
-            font-size: 1.25rem; /* text-xl */
-
-            font-weight: 600; /* font-semibold */
-
-            color: #334155; /* text-slate-700 */
-
-            margin-top: 1.5rem;
-
-            margin-bottom: 0.75rem;
-
-        }
-
-        .example-box {
-
-            background-color: #e0f2fe; /* bg-sky-50 */
-
-            border-left: 4px solid #0ea5e9; /* border-sky-500 */
-
-            padding: 1rem;
-
-            margin-top: 1rem;
-
-            margin-bottom: 1rem;
-
-            border-radius: 0.5rem; /* rounded-lg */
-
-            color: #075985; /* text-sky-800 */
-
-            font-style: italic;
-
-        }
-
-        .common-error-box {
-
-            background-color: #ffe4e6; /* bg-red-100 */
-
-            border-left: 4px solid #dc2626; /* border-red-600 */
-
-            padding: 1rem;
-
-            margin-top: 1rem;
-
-            margin-bottom: 1rem;
-
-            border-radius: 0.5rem;
-
-            color: #991b1b; /* text-red-800 */
-
-        }
-
-        .common-error-box .correction {
-
-            color: #166534; /* text-green-700 */
-
-            font-weight: 600;
-
-        }
-
-        .tip-box {
-
-            background-color: #ecfdf5; /* bg-emerald-50 */
-
-            border-left: 4px solid #10b981; /* border-emerald-500 */
-
-            padding: 1rem;
-
-            margin-top: 1rem;
-
-            margin-bottom: 1rem;
-
-            border-radius: 0.5rem; /* rounded-lg */
-
-            color: #065f46; /* text-emerald-800 */
-
-        }
-
-        table {
-
-            width: 100%;
-
-            border-collapse: collapse;
-
-            margin-top: 1.5rem;
-
-            margin-bottom: 1.5rem;
-
-            border-radius: 0.75rem; /* rounded-xl */
-
-            overflow: hidden; /* Ensures rounded corners apply to content */
-
-        }
-
-        th, td {
-
-            border: 1px solid #cbd5e1; /* border-slate-300 */
-
-            padding: 0.75rem 1rem; /* Adjusted padding */
-
-            text-align: left;
-
-            vertical-align: top; /* Align content to top */
-
-        }
-
-        th {
-
-            background-color: #334155; /* bg-slate-700 */
-
-            color: #f8fafc; /* text-slate-50 */
-
-            font-weight: 600;
-
-        }
-
-        tr:nth-child(even) {
-
-            background-color: #f1f5f9; /* bg-slate-100 */
-
-        }
-
-        /* Active state for selected tense row */
-
-        .tense-table-row.active {
-
-            background-color: #dbeafe; /* bg-blue-100 */
-
-            border-left: 4px solid #3b82f6; /* border-blue-500 */
-
-        }
-
-        .tense-table-row:hover {
-
-            cursor: pointer;
-
-            background-color: #e0f2fe; /* bg-sky-50 */
-
-        }
-
-        ul {
-
-            list-style-type: disc;
-
-            margin-left: 1.5rem;
-
-            margin-bottom: 1rem;
-
-        }
-
-        ol {
-
-            list-style-type: decimal;
-
-            margin-left: 1.5rem;
-
-            margin-bottom: 1rem;
-
-        }
-
-
-
-        /* Navigation styles */
-
-        .hamburger-menu {
-
-            cursor: pointer;
-
-            padding: 0.5rem;
-
-            position: fixed;
-
-            top: 1.5rem;
-
-            left: 1.5rem;
-
-            z-index: 1000;
-
-            background-color: #334155;
-
-            border-radius: 0.5rem;
-
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-            transition: transform 0.3s ease-in-out;
-
-        }
-
-        .hamburger-menu:hover {
-
-            transform: scale(1.05);
-
-        }
-
-        .hamburger-icon {
-
-            display: block;
-
-            width: 24px;
-
-            height: 2px;
-
-            background-color: #f8fafc;
-
-            margin: 6px 0;
-
-            transition: 0.4s;
-
-        }
-
-        .nav-sidebar {
-
-            height: 100%;
-
-            width: 0;
-
-            position: fixed;
-
-            z-index: 999;
-
-            top: 0;
-
-            left: 0;
-
-            background-color: #1e293b; /* slate-800 */
-
-            overflow-x: hidden;
-
-            transition: 0.5s;
-
-            padding-top: 60px;
-
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-        }
-
-        .nav-sidebar a {
-
-            padding: 8px 8px 8px 32px;
-
-            text-decoration: none;
-
-            font-size: 1.125rem; /* text-lg */
-
-            color: #cbd5e1; /* slate-300 */
-
-            display: block;
-
-            transition: 0.3s;
-
-            border-radius: 0.5rem;
-
-            margin: 0.5rem 1rem;
-
-        }
-
-        .nav-sidebar a:hover {
-
-            color: #e0f2fe; /* sky-50 */
-
-            background-color: #334155; /* slate-700 */
-
-        }
-
-        .nav-sidebar .closebtn {
-
-            position: absolute;
-
-            top: 0;
-
-            right: 25px;
-
-            font-size: 36px;
-
-            margin-left: 50px;
-
-            color: #f8fafc;
-
-        }
-
-        @media screen and (max-height: 450px) {
-
-            .nav-sidebar {padding-top: 15px;}
-
-            .nav-sidebar a {font-size: 18px;}
-
-        }
-
-        .line-through {
-
-            text-decoration: line-through;
-
-        }
-
-        .bold {
-
-            font-weight: bold;
-
-        }
-
-
-
-        /* Tense Visualization Styles */
-
-        .tense-visualization-container {
-
-            background-color: #f0f9ff; /* bg-sky-50 */
-
-            border: 1px solid #bae6fd; /* border-sky-200 */
-
-            border-radius: 0.75rem;
-
-            padding: 1.5rem;
-
-            margin-top: 2rem;
-
-            margin-bottom: 2rem;
-
-            text-align: center;
-
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
-
-            position: relative;
-
-        }
-
-        .tense-visualization-header {
-
-            font-size: 1.5rem;
-
-            font-weight: 700;
-
-            color: #0c4a6e; /* text-sky-900 */
-
-            margin-bottom: 1rem;
-
-        }
-
-        .emoji-timeline-display {
-
-            font-size: 3rem; /* Larger emojis */
-
-            margin: 1rem auto;
-
-            min-height: 100px; /* Ensure space even when empty */
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background-color: #ffffff;
-
-            border: 1px dashed #90cdf4;
-
-            border-radius: 0.5rem;
-
-            padding: 1rem;
-
-            overflow-x: auto; /* Allow horizontal scroll for long emoji sequences */
-
-        }
-
-        .tense-description {
-
-            margin-top: 1rem;
-
-            font-size: 1rem;
-
-            color: #475569; /* slate-600 */
-
-        }
-
-        .tense-emoji {
-
-            margin-right: 0.5rem; /* Space between emoji and text */
-
-        }
-
-
-
-        /* AI Feature Styles */
-
-        .ai-feature-container {
-
-            background-color: #f0fdf4; /* bg-emerald-50 */
-
-            border: 1px solid #a7f3d0; /* border-emerald-200 */
-
-            border-radius: 0.75rem;
-
-            padding: 2rem;
-
-            margin-top: 3rem;
-
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
-
-        }
-
-        .ai-feature-header {
-
-            font-size: 1.75rem;
-
-            font-weight: 700;
-
-            color: #065f46; /* text-emerald-900 */
-
-            margin-bottom: 1.5rem;
-
-            text-align: center;
-
-        }
-
-        .ai-textarea {
-
-            width: 100%;
-
-            min-height: 120px;
-
-            padding: 1rem;
-
-            border: 2px solid #90cdf4;
-
-            border-radius: 0.5rem;
-
-            font-size: 1rem;
-
-            color: #1e293b;
-
-            background-color: #ffffff;
-
-            resize: vertical;
-
-            transition: border-color 0.2s;
-
-        }
-
-        .ai-textarea:focus {
-
-            outline: none;
-
-            border-color: #3b82f6;
-
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-
-        }
-
-        .ai-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 0.75rem 1.5rem;
-
-            margin-top: 1.5rem;
-
-            background-color: #3b82f6; /* blue-500 */
-
-            color: white;
-
-            font-weight: 600;
-
-            border-radius: 0.5rem;
-
-            border: none;
-
-            cursor: pointer;
-
-            transition: background-color 0.2s, transform 0.2s;
-
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-        }
-
-        .ai-button:hover {
-
-            background-color: #2563eb; /* blue-600 */
-
-            transform: translateY(-2px);
-
-        }
-
-        .ai-button:active {
-
-            background-color: #1d4ed8; /* blue-700 */
-
-            transform: translateY(0);
-
-        }
-
-        .ai-button:disabled {
-
-            background-color: #9ca3af; /* gray-400 */
-
-            cursor: not-allowed;
-
-        }
-
-        .ai-output-area {
-
-            margin-top: 2rem;
-
-            padding: 1.5rem;
-
-            background-color: #e0f2fe; /* bg-sky-50 */
-
-            border: 1px solid #90cdf4; /* border-sky-300 */
-
-            border-radius: 0.75rem;
-
-            min-height: 100px;
-
-            color: #075985; /* text-sky-800 */
-
-            font-style: italic;
-
-            position: relative;
-
-        }
-
-        .ai-output-area h4 {
-
-            font-weight: 700;
-
-            color: #0c4a6e; /* text-sky-900 */
-
-            margin-bottom: 0.5rem;
-
-        }
-
-        .ai-loading-indicator {
-
-            display: none; /* Hidden by default */
-
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            font-size: 1.2rem;
-
-            color: #3b82f6;
-
-        }
-
-        .ai-loading-indicator.active {
-
-            display: block;
-
-        }
-
-    </style>
-
 </head>
-
 <body>
-
     <div class="hamburger-menu" onclick="toggleNav()">
-
         <span class="hamburger-icon"></span>
-
         <span class="hamburger-icon"></span>
-
         <span class="hamburger-icon"></span>
-
     </div>
-
-
 
     <div id="mySidebar" class="nav-sidebar">
-
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
-
         <a href="#introduction" onclick="toggleNav()">1. Introduction</a>
-
         <a href="#tenses" onclick="toggleNav()">2. Tenses</a>
-
         <a href="#subject-verb-agreement" onclick="toggleNav()">3. Subject-Verb Agreement</a>
-
         <a href="#articles" onclick="toggleNav()">4. Articles</a>
-
         <a href="#sentence-structure" onclick="toggleNav()">5. Sentence Structure</a>
-
         <a href="#modal-verbs" onclick="toggleNav()">6. Modal Verbs</a>
-
         <a href="#conditionals" onclick="toggleNav()">7. Conditionals</a>
-
         <a href="#passive-voice" onclick="toggleNav()">8. Passive Voice</a>
-
         <a href="#relative-clauses" onclick="toggleNav()">9. Relative Clauses</a>
-
         <a href="#prepositions" onclick="toggleNav()">10. Prepositions</a>
-
         <a href="#punctuation" onclick="toggleNav()">11. Punctuation</a>
-
         <a href="#gerunds-infinitives" onclick="toggleNav()">12. Gerunds and Infinitives</a>
-
         <a href="#adjectives-adverbs" onclick="toggleNav()">13. Adjective and Adverb Use</a>
-
         <a href="#comparatives-superlatives" onclick="toggleNav()">14. Comparatives and Superlatives</a>
-
         <a href="#coherence-cohesion" onclick="toggleNav()">15. Coherence and Cohesion</a>
-
         <a href="#parallelism" onclick="toggleNav()">16. Parallelism</a>
-
         <a href="#inversion" onclick="toggleNav()">17. Inversion</a>
-
         <a href="#subjunctive-mood" onclick="toggleNav()">18. Subjunctive Mood</a>
-
         <a href="#participle-clauses" onclick="toggleNav()">19. Participle Clauses</a>
-
         <a href="#nominalization" onclick="toggleNav()">20. Nominalization</a>
-
         <a href="#ai-sentence-enhancer" onclick="toggleNav()">21. AI-Powered Sentence Enhancer</a>
-
     </div>
 
-
-
     <div class="container bg-white shadow-lg rounded-xl my-8 p-8">
-
         <header class="text-center mb-8">
-
             <h1 class="text-5xl font-extrabold text-blue-800 mb-4">Mastering English Grammar for IELTS Writing</h1>
-
             <p class="text-xl text-slate-600">A Comprehensive Guide for Band 8+ Aspirants by Kan515</p>
-
         </header>
 
-
-
         <section id="introduction" class="mb-8 p-6 bg-blue-50 rounded-lg shadow-md">
-
             <h2 class="section-heading text-blue-700 border-blue-300">1. Introduction</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Welcome to this comprehensive grammar guide, meticulously designed for IELTS candidates aiming for a Band 8 or higher in the writing section. A strong command of English grammar is not merely about avoiding errors; it's about demonstrating a wide range of complex structures with accuracy, precision, and flexibility. This resource will break down essential grammar topics, providing clear explanations, relevant examples, and practical tips directly applicable to both Academic and General Training IELTS Writing Tasks. Let's embark on this journey to elevate your grammatical proficiency and secure the score you deserve.
-
             </p>
-
         </section>
 
-
-
         <section id="tenses" class="mb-8">
-
             <h2 class="section-heading">2. Tenses: Past, Present, Future</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Understanding and correctly applying the 12 English tenses is fundamental for clear and accurate communication, especially when describing data, processes, and past events in IELTS Writing Task 1, or expressing arguments and opinions in Task 2. Below is a summarized table, complete with usage explanations and IELTS-relevant examples.
-
             </p>
-
             <p class="text-lg text-slate-700 leading-relaxed mb-4">
-
                 <strong class="font-bold">Understanding the Emoji Timeline Visualization:</strong>
-
                 <br>The interactive emoji timeline visually represents the flow of time for each tense.
-
                 <ul>
-
                     <li><span class="font-bold">Timeline:</span> Represented by `---` with `⬅️ Past | Now | Future ➡️`. The "Now" point is implicit in the center.</li>
-
                     <li><span class="font-bold">📍 (Point):</span> Indicates a specific, discrete action or moment in time.</li>
-
                     <li><span class="font-bold">⏳ (Hourglass):</span> Represents an action that is ongoing or a duration.</li>
-
                     <li><span class="font-bold">🔄 (Recycle/Loop):</span> Shows habitual, repetitive, or general truth actions.</li>
-
                     <li><span class="font-bold">🏁 (Checkered Flag):</span> Indicates completion by a certain point in the future.</li>
-
                     <li><span class="font-bold">⏪ (Fast Rewind):</span> Denotes an action that happened *before* another past action.</li>
-
                     <li><span class="font-bold">➡️ (Right Arrow):</span> Points towards the future, indicating progression.</li>
-
                     <li><span class="font-bold">⬅️ (Left Arrow):</span> Points towards the past, indicating prior events.</li>
-
                 </ul>
-
             </p>
-
-
 
             <h3 class="sub-section-heading">2.1. The 12 English Tenses: Summary and Timeline</h3>
 
-
-
             <div class="tense-visualization-container">
-
                 <div class="tense-visualization-header" id="current-tense-name">Click a tense in the table below to see its emoji timeline!</div>
-
                 <div id="emoji-timeline-display" class="emoji-timeline-display"></div>
-
                 <p id="current-tense-description" class="tense-description"></p>
-
             </div>
-
-
 
             <div class="overflow-x-auto rounded-xl shadow-md">
-
                 <table>
-
                     <thead>
-
                         <tr>
-
                             <th>Tense</th>
-
                             <th>Form</th>
-
                             <th>Keywords/Time Expressions</th>
-
                             <th>Usage & Explanation</th>
-
                             <th>IELTS Writing Example</th>
-
                         </tr>
-
                     </thead>
-
                     <tbody>
-
                         <tr class="tense-table-row" data-tense-id="present-simple">
-
                             <td class="font-semibold"><span class="tense-emoji">🔄</span> 2.1.1. Present Simple</td>
-
                             <td>S + V1 / Vs-es</td>
-
                             <td>Always, usually, often, sometimes, never, every day/week/year, generally, in general, facts.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> General truths, habits, and routines.</p>
-
                                 <ul>
-
                                     <li>For habits, routines, facts, and general truths.</li>
-
                                     <li>Often used in Task 1 to describe charts/graphs showing current situations or general trends.</li>
-
                                     <li>Also used for expressing opinions or scientific facts in Task 2.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">The bar chart <span class="font-bold">shows</span> the percentage of students who <span class="font-bold">attend</span> university. <br> Air pollution <span class="font-bold">poses</span> a significant threat to urban populations globally.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="present-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏳</span> 2.1.2. Present Continuous</td>
-
                             <td>S + am/is/are + V-ing</td>
-
                             <td>Now, at the moment, currently, at present, these days, nowadays, today, still.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Actions happening now or temporary situations.</p>
-
                                 <ul>
-
                                     <li>For actions happening now, temporary situations, or trends developing at the moment of speaking.</li>
-
                                     <li>Useful for dynamic descriptions in Task 1 (trends that are currently ongoing) or current events/situations in Task 2.</li>
-
                                     <li>Emphasizes the ongoing nature of an action.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">Global temperatures <span class="font-bold">are steadily rising</span>, indicating a significant environmental concern. <br> The company <span class="font-bold">is currently implementing</span> new sustainable practices.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="present-perfect">
-
                             <td class="font-semibold"><span class="tense-emoji">📍</span> 2.1.3. Present Perfect</td>
-
                             <td>S + have/has + V3 (Past Participle)</td>
-
                             <td>Since (a point in time), for (a duration), already, yet, just, ever, never, so far, recently, up to now.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Connects past actions to the present with a result or continuation.</p>
-
                                 <ul>
-
                                     <li>For actions that started in the past and continue to the present.</li>
-
                                     <li>For actions completed at an unspecified time in the past with a present result.</li>
-
                                     <li>Crucial for describing changes over time in Task 1, often with "since" or "for."</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">Since 2000, the consumption of renewable energy <span class="font-bold">has significantly increased</span>. <br> The government <span class="font-bold">has initiated</span> several projects to improve public health.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="present-perfect-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏳</span> 2.1.4. Present Perfect Continuous</td>
-
                             <td>S + have/has been + V-ing</td>
-
                             <td>Since (a point in time), for (a duration), all day/week/year, recently, lately.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Ongoing actions that started in the past and continue up to or just before the present.</p>
-
                                 <ul>
-
                                     <li>For actions that started in the past and are still continuing, emphasizing duration.</li>
-
                                     <li>Less common in Task 1, but can show ongoing trends or efforts in Task 2, particularly when the duration of an activity is important.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">Researchers <span class="font-bold">have been studying</span> the effects of climate change for decades. <br> The city <span class="font-bold">has been experiencing</span> rapid urbanization over the last twenty years.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="past-simple">
-
                             <td class="font-semibold"><span class="tense-emoji">📍</span> 2.1.5. Past Simple</td>
-
                             <td>S + V2 (Past Simple)</td>
-
                             <td>Yesterday, last week/month/year, in (a past year), ago, when (a past event).</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Completed actions at a specific time in the past.</p>
-
                                 <ul>
-
                                     <li>Crucial for describing historical data or events in Task 1 graphs with past years.</li>
-
                                     <li>Describes a single, finished action or state in the past.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">In 1990, unemployment rates <span class="font-bold">stood</span> at 5%. <br> The company's profits <span class="font-bold">declined sharply</span> between 2005 and 2008.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="past-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏳</span> 2.1.6. Past Continuous</td>
-
                             <td>S + was/were + V-ing</td>
-
                             <td>While, as, when (for interruption), at that time, all day yesterday.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Actions ongoing at a specific point or period in the past.</p>
-
                                 <ul>
-
                                     <li>For actions that were ongoing at a specific time in the past, or interrupted by another action.</li>
-
                                     <li>Useful for setting context or background in narratives or describing concurrent past events.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">While the government <span class="font-bold">was implementing</span> new policies, public opinion <span class="font-bold">was shifting</span>. <br> The factory <span class="font-bold">was producing</span> 1000 units per day before it closed down.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="past-perfect">
-
                             <td class="font-semibold"><span class="tense-emoji">⏪</span> 2.1.7. Past Perfect</td>
-
                             <td>S + had + V3 (Past Participle)</td>
-
                             <td>By (a past time), before, after, already, until then, when (for sequence).</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> An action completed before another past action.</p>
-
                                 <ul>
-
                                     <li>Essential for showing sequence of past events, particularly in complex historical or data descriptions where one event precedes another.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">By 2000, the company <span class="font-bold">had already diversified</span> its product range. <br> The number of internet users <span class="font-bold">had stabilized</span> before mobile internet became widespread.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="past-perfect-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏪⏳</span> 2.1.8. Past Perfect Continuous</td>
-
                             <td>S + had been + V-ing</td>
-
                             <td>For (a duration), since (a point in time), before (another past action).</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> An action ongoing for a period before another past action.</p>
-
                                 <ul>
-
                                     <li>Emphasizes duration leading up to a past point.</li>
-
                                     <li>Can add depth when describing prolonged activities that culminated before another past event.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">The city <span class="font-bold">had been experiencing</span> rapid growth before the economic downturn in 2008. <br> Scientists <span class="font-bold">had been warning</span> about climate change for years before significant action was taken.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="future-simple">
-
                             <td class="font-semibold"><span class="tense-emoji">➡️</span> 2.1.9. Future Simple (will/be going to)</td>
-
                             <td>S + will + V1 / S + am/is/are + going to + V1</td>
-
                             <td>Tomorrow, next week/month/year, soon, in the future, later, perhaps, probably.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Predictions, promises, or spontaneous decisions about the future.</p>
-
                                 <ul>
-
                                     <li>Used when discussing future trends or solutions in Task 1 (projections) and Task 2.</li>
-
                                     <li>'Will' is often for general predictions or promises, while 'be going to' implies a prior plan or strong intention.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">It is projected that electric vehicles <span class="font-bold">will dominate</span> the market by 2030. <br> The government <span class="font-bold">is going to launch</span> a new campaign next month.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="future-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏳➡️</span> 2.1.10. Future Continuous</td>
-
                             <td>S + will be + V-ing</td>
-
                             <td>At this time tomorrow, next (day/week/month), while, by (a future time) + V-ing.</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> Actions that will be ongoing at a specific time in the future.</p>
-
                                 <ul>
-
                                     <li>Useful for describing future scenarios or overlapping future events.</li>
-
                                     <li>Emphasizes that an action will be in progress at a certain future moment.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">By next year, many countries <span class="font-bold">will be implementing</span> stricter environmental regulations. <br> This time next decade, developing nations <span class="font-bold">will be focusing</span> more on sustainable energy.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="future-perfect">
-
                             <td class="font-semibold"><span class="tense-emoji">🏁➡️</span> 2.1.11. Future Perfect</td>
-
                             <td>S + will have + V3 (Past Participle)</td>
-
                             <td>By (a future time), by then, before (a future action).</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> An action that will be completed before a specific time or another action in the future.</p>
-
                                 <ul>
-
                                     <li>Highly useful for projections in Task 1 when describing a state that will be achieved by a certain future date.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">By 2050, the global population <span class="font-bold">will have reached</span> ten billion. <br> The construction of the new railway line <span class="font-bold">will have been completed</span> by the end of 2028.</div></td>
-
                         </tr>
-
                         <tr class="tense-table-row" data-tense-id="future-perfect-continuous">
-
                             <td class="font-semibold"><span class="tense-emoji">⏳🏁➡️</span> 2.1.12. Future Perfect Continuous</td>
-
                             <td>S + will have been + V-ing</td>
-
                             <td>For (a duration) by (a future time), by the time (a future action).</td>
-
                             <td>
-
                                 <p><strong>Core Function:</strong> An action that will have been ongoing for a period before a specific time in the future.</p>
-
                                 <ul>
-
                                     <li>Emphasizes duration leading up to a future point.</li>
-
                                     <li>Can be used to show sophisticated understanding of future continuous processes.</li>
-
                                 </ul>
-
                             </td>
-
                             <td><div class="example-box">By the end of the decade, scientists <span class="font-bold">will have been researching</span> sustainable energy for over 50 years. <br> If current trends continue, by 2040, the average citizen <span class="font-bold">will have been relying</span> on digital technology for most daily tasks.</div></td>
-
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip for Tenses:</p>
-
                 <ul>
-
                     <li>For Task 1 (Academic): Master Past Simple, Present Perfect, and Future Simple (for predictions/projections) to describe trends and changes accurately. Use Present Simple and Passive Voice for process diagrams.</li>
-
                     <li>For Task 2: Employ a wider range of tenses to express nuanced ideas, including conditionals and modals, and the perfect aspects to show completed actions or ongoing states relevant to the present.</li>
-
                     <li>Avoid tense shifts without a clear reason. Ensure your writing maintains a consistent timeline.</li>
-
                     <li><strong class="font-bold">Complexity:</strong> Demonstrating control over a variety of tenses, especially the perfect and continuous forms, contributes significantly to your Grammatical Range and Accuracy score.</li>
-
                 </ul>
-
             </div>
-
             <h3 class="sub-sub-section-heading">2.2. Common Errors with Tenses:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Incorrectly mixing tenses for continuous actions or using simple past for trends.</p>
-
                 <p class="line-through">The chart showed how the population growed over twenty years.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The chart showed how the population <span class="font-bold">grew</span> over twenty years. (Use simple past for completed action in the past). <br> <span class="font-bold">Alternatively:</span> The chart showed how the population <span class="font-bold">was growing</span> over twenty years (if emphasizing continuous change over a period).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Confusing Present Perfect and Past Simple for past events with specific time references.</p>
-
                 <p class="line-through">The number of visitors has fallen in 2010.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The number of visitors <span class="font-bold">fell</span> in 2010. (Specific past time requires Past Simple). <br> <span class="font-bold">Correction:</span> The number of visitors <span class="font-bold">has fallen</span> since 2010. (Duration from past to present requires Present Perfect).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Using 'will' where 'be going to' is more appropriate for planned future actions or vice versa.</p>
-
                 <p class="line-through">The government will open a new hospital next year.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The government <span class="font-bold">is going to open</span> a new hospital next year. (Planned action, not spontaneous decision or pure prediction). <br> <span class="font-bold">Alternatively:</span> The government <span class="font-bold">will open</span> a new hospital next year (if it's a general prediction or a formal statement of intent without emphasizing prior planning).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 4: Overuse of Present Simple when describing dynamic data in Task 1.</p>
-
                 <p class="line-through">From 2000 to 2010, the sales increase significantly.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> From 2000 to 2010, the sales <span class="font-bold">increased</span> significantly. (Use Past Simple for completed past periods). <br> <span class="font-bold">Alternatively:</span> Since 2000, the sales <span class="font-bold">have increased</span> significantly. (Use Present Perfect for trends continuing to the present).</p>
-
             </div>
-
         </section>
-
-
 
         <section id="subject-verb-agreement" class="mb-8">
-
             <h2 class="section-heading">3. Subject-Verb Agreement</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Subject-verb agreement is a fundamental grammar rule ensuring that the verb in a sentence corresponds correctly in number (singular or plural) with its subject. Errors in agreement can significantly impact your grammar score. A strong grasp of this concept demonstrates precision and control, which are highly valued by examiners. Even in complex sentences with intervening phrases, the verb must always agree with its true subject.
-
             </p>
-
             <h3 class="sub-sub-section-heading">3.1. Key Rules and Advanced Considerations:</h3>
-
             <ul>
-
                 <li><strong>Singular Subject, Singular Verb:</strong> A singular subject takes a singular verb (usually ending in -s in the present simple, or 'is', 'was', 'has').
-
                     <div class="example-box">The <span class="font-bold">report highlights</span> a growing concern regarding urban development. (Not 'report highlight')</div>
-
                     <div class="example-box">A <span class="font-bold">major challenge is</span> the lack of funding.</div>
-
                 </li>
-
                 <li><strong>Plural Subject, Plural Verb:</strong> A plural subject takes a plural verb (no -s in the present simple, or 'are', 'were', 'have').
-
                     <div class="example-box">Many <span class="font-bold">students prefer</span> online learning due to its flexibility and accessibility. (Not 'students prefers')</div>
-
                     <div class="example-box">Several <span class="font-bold">factors contribute</span> to climate change.</div>
-
                 </li>
-
                 <li><strong>Compound Subjects:</strong>
-
                     <ul>
-
                         <li>Joined by "and" usually take a plural verb.
-
                             <div class="example-box"><span class="font-bold">Education and healthcare are</span> considered vital sectors for national prosperity.</div>
-
                             <div class="example-box">Both <span class="font-bold">parents and children benefit</span> from family time.</div>
-
                         </li>
-
                         <li>Joined by "or" or "nor" agree with the subject closest to the verb. This is particularly important for clarity.
-
                             <div class="example-box">Neither the students nor the <span class="font-bold">teacher was</span> aware of the new policy. (Teacher is singular, closest to verb)</div>
-
                             <div class="example-box">Neither the teacher nor the <span class="font-bold">students were</span> prepared for the sudden change. (Students is plural, closest to verb)</div>
-
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Indefinite Pronouns:</strong> Words like 'each', 'every', 'either', 'neither', 'one', 'anyone', 'everyone', 'no one', 'somebody', 'nobody', 'something', 'nothing', 'anything' are singular and take a singular verb.
-
                     <div class="example-box"><span class="font-bold">Each of the proposals requires</span> careful consideration before implementation.</div>
-
                     <div class="example-box"><span class="font-bold">Everyone believes</span> that environmental protection is a shared responsibility.</div>
-
                     <div class="example-box"><span class="font-bold">Nothing seems</span> to deter the spread of misinformation.</div>
-
                 </li>
-
                 <li><strong>Collective Nouns:</strong> Can be singular or plural depending on whether the group acts as a single unit or as individuals. In IELTS, it's generally safer and more common to treat them as singular unless individual actions are clearly implied. Examples include 'government', 'committee', 'team', 'family', 'audience'.
-
                     <div class="example-box">The <span class="font-bold">committee has</span> reached a unanimous decision on the budget allocation. (Acting as a unit)</div>
-
                     <div class="example-box">The <span class="font-bold">staff are</span> debating among themselves about the new work schedule. (Acting as individuals - less common in formal IELTS, but grammatically correct)</div>
-
                 </li>
-
                 <li><strong>Phrases between Subject and Verb:</strong> Ignore intervening phrases (e.g., prepositional phrases, relative clauses, appositives) when determining agreement. The verb must agree with the *actual* subject, not a noun in the intervening phrase.
-
                     <div class="example-box">The <span class="font-bold">increase</span> in global temperatures, which has been observed over the last century, <span class="font-bold">is</span> alarming. (Subject is 'increase', not 'temperatures')</div>
-
                     <div class="example-box">The <span class="font-bold">challenges</span> faced by developing nations <span class="font-bold">are</span> complex and multifaceted. (Subject is 'challenges', not 'nations')</div>
-
                 </li>
-
                 <li><strong>Inverted Sentences:</strong> When the subject comes after the verb (e.g., with 'there is/are', 'here is/are', or in questions), ensure the verb still agrees with the true subject that follows it.
-
                     <div class="example-box">There <span class="font-bold">are</span> several <span class="font-bold">factors</span> contributing to this phenomenon. (Subject is 'factors')</div>
-
                     <div class="example-box">Among the various solutions <span class="font-bold">is</span> the <span class="font-bold">adoption</span> of renewable energy. (Subject is 'adoption')</div>
-
                 </li>
-
                 <li><strong>Quantifiers:</strong> Phrases like 'a number of', 'the number of', 'some', 'all', 'most'.
-
                     <ul>
-
                         <li>'<span class="font-bold">A number of</span>' (meaning 'many') takes a plural verb.
-
                             <div class="example-box"><span class="font-bold">A number of students have</span> enrolled in the program.</div>
-
                         </li>
-
                         <li>'<span class="font-bold">The number of</span>' takes a singular verb.
-
                             <div class="example-box"><span class="font-bold">The number of participants has</span> increased steadily.</div>
-
                         </li>
-
                         <li>'Some', 'all', 'most' take a singular verb if referring to a singular/uncountable noun, and a plural verb if referring to a plural noun.
-
                             <div class="example-box"><span class="font-bold">Most of the water is</span> polluted.</div>
-
                             <div class="example-box"><span class="font-bold">Most of the students are</span> aware.</div>
-
                         </li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Subject-verb agreement is a fundamental aspect of grammatical accuracy. Examiners look for consistent control over this rule, especially in longer, more complex sentences. Always identify the true subject before deciding on the verb form. Errors here can significantly lower your score for Grammatical Range and Accuracy. Pay particular attention when using collective nouns, indefinite pronouns, or when phrases separate the subject from its verb.</p>
-
             </div>
-
             <h3 class="sub-sub-section-heading">3.2. Common Errors with Subject-Verb Agreement:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Ignoring intervening phrases.</p>
-
                 <p class="line-through">One of the main reasons for poverty are lack of education.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> One of the main <span class="font-bold">reasons</span> for poverty <span class="font-bold">is</span> lack of education. (The subject is 'One', not 'reasons').</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect agreement with indefinite pronouns.</p>
-
                 <p class="line-through">Everyone believe that technology is beneficial.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Everyone believes</span> that technology is beneficial. ('Everyone' is singular).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Collective nouns treated inconsistently.</p>
-
                 <p class="line-through">The government have introduced new laws.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The <span class="font-bold">government has</span> introduced new laws. (Treating government as a single unit, which is typical in formal writing).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 4: Confusing 'a number of' and 'the number of'.</p>
-
                 <p class="line-through">The number of students are increasing.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The <span class="font-bold">number of students is</span> increasing. ('The number' is singular).</p>
-
             </div>
-
         </section>
-
-
 
         <section id="articles" class="mb-8">
-
             <h2 class="section-heading">4. Articles (a, an, the, zero article)</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Articles are small but crucial words that specify whether a noun is definite or indefinite. Incorrect article usage is a frequent source of errors for non-native speakers and can detract from the clarity and precision of your writing. Mastering their use demonstrates a high level of grammatical control. English has three articles: 'a', 'an' (indefinite articles), and 'the' (definite article). Additionally, understanding when to use no article (the 'zero article') is equally important.
-
             </p>
-
             <h3 class="sub-sub-section-heading">4.1. Definite Article "the":</h3>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Use 'the' when referring to something specific, unique, or something that has already been mentioned, making its identity clear to the reader.
-
             </p>
-
             <ul>
-
                 <li><strong>Specific or Already Mentioned:</strong> Used when referring to something specific, unique, or something that has already been mentioned in the text or is commonly understood by the reader.
-
                     <div class="example-box">The <span class="font-bold">government's recent policy</span> aims to address <span class="font-bold">the issue of unemployment</span>. (Specific policy, specific issue)</div>
-
                     <div class="example-box">A new study was published yesterday. <span class="font-bold">The study</span> highlights the benefits of exercise. (Study mentioned before)</div>
-
                 </li>
-
                 <li><strong>Unique Items:</strong> Used with items that are unique or one of a kind.
-
                     <div class="example-box">The <span class="font-bold">sun</span>, the <span class="font-bold">moon</span>, the <span class="font-bold">internet</span>, the <span class="font-bold">world</span>, the <span class="font-bold">Earth</span>.</div>
-
                 </li>
-
                 <li><strong>Superlatives:</strong> Always used before superlative adjectives.
-
                     <div class="example-box">This is the <span class="font-bold">best</span> solution to the problem.</div>
-
                     <div class="example-box">The <span class="font-bold">most significant</span> factor is cost.</div>
-
                 </li>
-
                 <li><strong>Specific Geographical Features:</strong> Used with rivers (the Nile), oceans (the Pacific Ocean), deserts (the Sahara Desert), mountain ranges (the Himalayas), and groups of islands (the Maldives).
-
                     <div class="example-box">The <span class="font-bold">Amazon River</span> is the largest by discharge volume.</div>
-
                 </li>
-
                 <li><strong>Musical Instruments:</strong> When referring to playing a musical instrument.
-
                     <div class="example-box">She plays the <span class="font-bold">piano</span>.</div>
-
                 </li>
-
                 <li><strong>Adjectives referring to a group of people:</strong>
-
                     <div class="example-box">The <span class="font-bold">poor</span> often suffer the most from economic crises.</div>
-
                 </li>
-
             </ul>
-
-
 
             <h3 class="sub-sub-section-heading">4.2. Indefinite Articles "a" and "an":</h3>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Use 'a' or 'an' when referring to a non-specific or general singular countable noun, or when introducing a noun for the first time. 'An' is used before words that start with a vowel sound (a, e, i, o, u), and 'a' is used before words that start with a consonant sound. Remember, it's about the *sound*, not just the letter.
-
             </p>
-
             <ul>
-
                 <li><strong>Non-specific Singular Countable Nouns:</strong>
-
                     <div class="example-box">Students need <span class="font-bold">a good education</span> to succeed. (Any good education)</div>
-
                     <div class="example-box">There was <span class="font-bold">an interesting discussion</span> about climate change. (Any interesting discussion)</div>
-
                 </li>
-
                 <li><strong>Introducing a Noun for the First Time:</strong>
-
                     <div class="example-box">I read <span class="font-bold">a book</span> about sustainable development. (First mention)</div>
-
                 </li>
-
                 <li><strong>Professions:</strong>
-
                     <div class="example-box">She is <span class="font-bold">a doctor</span>. He is <span class="font-bold">an engineer</span>.</div>
-
                 </li>
-
                 <li><strong>Expressions of Quantity:</strong>
-
                     <div class="example-box">A <span class="font-bold">few</span>, a <span class="font-bold">lot of</span>, a <span class="font-bold">couple of</span>.</div>
-
                 </li>
-
             </ul>
-
-
 
             <h3 class="sub-sub-section-heading">4.3. Zero Article (No Article):</h3>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 The zero article is used when a noun does not require 'a', 'an', or 'the'. This is common with plural countable nouns and uncountable nouns when speaking generally, proper nouns, and certain fixed expressions.
-
             </p>
-
             <ul>
-
                 <li><strong>General Plural Countable Nouns:</strong> When referring to all members of a group or a general category.
-
                     <div class="example-box"><span class="font-bold">Children</span> need support from their families. (All children)</div>
-
                     <div class="example-box"><span class="font-bold">Computers</span> have revolutionized communication. (Computers in general)</div>
-
                 </li>
-
                 <li><strong>General Uncountable Nouns:</strong> When referring to substances, concepts, or ideas in a general sense.
-
                     <div class="example-box"><span class="font-bold">Water</span> is essential for life.</div>
-
                     <div class="example-box"><span class="font-bold">Education</span> plays a vital role in society.</div>
-
                     <div class="example-box"><span class="font-bold">Information</span> is readily available online.</div>
-
                 </li>
-
                 <li><strong>Proper Nouns (most):</strong> Names of people, countries (most single countries), cities, continents, specific streets, lakes, single mountains, etc.
-
                     <div class="example-box"><span class="font-bold">John</span> lives in <span class="font-bold">London</span>. <span class="font-bold">Asia</span> is a large continent.</div>
-
                 </li>
-
                 <li><strong>Meals, Sports, Academic Subjects:</strong>
-
                     <div class="example-box">We had <span class="font-bold">dinner</span>. She plays <span class="font-bold">basketball</span>. He studies <span class="font-bold">history</span>.</div>
-
                 </li>
-
                 <li><strong>Means of Transport (with 'by'):</strong>
-
                     <div class="example-box">By <span class="font-bold">car</span>, by <span class="font-bold">bus</span>, by <span class="font-bold">train</span>.</div>
-
                 </li>
-
             </ul>
 
-
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Article errors are common and can detract from your grammatical accuracy. Pay close attention to whether the noun you are using is specific or general, countable or uncountable, and whether it has been previously mentioned. Practice identifying these nuances. While a few errors might be tolerated, consistent misuse of articles can significantly impact your score.</p>
-
             </div>
-
             <h3 class="sub-sub-section-heading">4.4. Common Errors with Articles:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Missing 'the' before a specific noun.</p>
-
                 <p class="line-through">Government should invest in education.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">The government</span> should invest in <span class="font-bold">education</span>. (Specific government, 'education' in general)</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using 'the' with general plural or uncountable nouns.</p>
-
                 <p class="line-through">The pollution is a major problem in cities.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Pollution</span> is a major problem in <span class="font-bold">cities</span>. (Referring to pollution and cities in general).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Incorrect use of 'a'/'an' based on spelling rather than sound.</p>
-
                 <p class="line-through">It was a honest mistake.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> It was <span class="font-bold">an honest</span> mistake. ( 'honest' starts with a vowel sound /ɒ/).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 4: Using an article before proper nouns or certain fixed expressions.</p>
-
                 <p class="line-through">I go to the school by the bus.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> I go to <span class="font-bold">school</span> by <span class="font-bold">bus</span>. (Fixed expressions 'go to school' and 'by bus' typically use zero article).</p>
-
             </div>
-
         </section>
-
-
 
         <section id="sentence-structure" class="mb-8">
-
             <h2 class="section-heading">5. Sentence Structure</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Mastering varied sentence structures is crucial for achieving a high score in IELTS Writing, particularly for the 'Grammatical Range and Accuracy' criterion. It demonstrates your ability to produce complex sentences with flexibility and control. This section will cover simple, compound, complex, and compound-complex sentences, along with common errors and tips for effective use.
-
             </p>
-
             <h3 class="sub-sub-section-heading">5.1. Types of Sentences:</h3>
-
             <ul>
-
                 <li><strong>Simple Sentence:</strong> Contains one independent clause (one subject and one verb).
-
                     <div class="example-box">Global temperatures <span class="font-bold">are rising</span>.</div>
-
                     <div class="example-box">The government <span class="font-bold">implemented</span> new policies.</div>
-
                 </li>
-
                 <li><strong>Compound Sentence:</strong> Contains two or more independent clauses joined by a coordinating conjunction (FANBOYS: For, And, Nor, But, Or, Yet, So) or a semicolon.
-
                     <div class="example-box">Air pollution is a serious concern, <span class="font-bold">and</span> it affects public health significantly.</div>
-
                     <div class="example-box">Many people prefer public transport; <span class="font-bold">however</span>, car ownership remains popular.</div>
-
                 </li>
-
                 <li><strong>Complex Sentence:</strong> Contains one independent clause and one or more dependent clauses. Dependent clauses often begin with subordinating conjunctions (e.g., although, because, while, if, when, since, as, unless, whereas) or relative pronouns (e.g., who, which, that, whose, where, when, why).
-
                     <div class="example-box"><span class="font-bold">Although</span> technology offers numerous benefits, it also presents certain challenges.</div>
-
                     <div class="example-box">The report highlights the critical role <span class="font-bold">that</span> education plays in economic development.</div>
-
                 </li>
-
                 <li><strong>Compound-Complex Sentence:</strong> Contains two or more independent clauses and one or more dependent clauses.
-
                     <div class="example-box"><span class="font-bold">While</span> some argue for stricter regulations, others believe in market-based solutions, <span class="font-bold">and</span> both perspectives have valid points.</div>
-
                     <div class="example-box">The data clearly indicates a decline in sales <span class="font-bold">since</span> 2005, <span class="font-bold">but</span> the company has yet to implement a new strategy, <span class="font-bold">which</span> is causing concern among investors.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">5.2. Common Errors in Sentence Structure:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Run-on sentences (fusing independent clauses without proper punctuation or conjunctions).</p>
-
                 <p class="line-through">Technology advances rapidly it impacts every aspect of life.</p>
-
                 <p class="correction"><span class="font-bold">Correction (using a period):</span> Technology advances rapidly. It impacts every aspect of life.</p>
-
                 <p class="correction"><span class="font-bold">Correction (using a semicolon):</span> Technology advances rapidly; it impacts every aspect of life.</p>
-
                 <p class="correction"><span class="font-bold">Correction (using a coordinating conjunction):</span> Technology advances rapidly, <span class="font-bold">and</span> it impacts every aspect of life.</p>
-
                 <p class="correction"><span class="font-bold">Correction (using a subordinating conjunction):</span> <span class="font-bold">As</span> technology advances rapidly, it impacts every aspect of life.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Comma splices (joining independent clauses with only a comma).</p>
-
                 <p class="line-through">Many students face financial difficulties, they often work part-time.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Many students face financial difficulties; they often work part-time.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Many students face financial difficulties, <span class="font-bold">so</span> they often work part-time.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Because</span> many students face financial difficulties, they often work part-time.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Sentence fragments (incomplete sentences lacking a subject, verb, or complete thought).</p>
-
                 <p class="line-through">Due to the rising cost of living. Many families struggle.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Due to the rising cost of living, many families struggle.</p>
-
                 <p class="line-through">Although the government introduced new measures. The problem persisted.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Although the government introduced new measures, the problem persisted.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>To demonstrate a wide range of grammatical structures, consciously vary your sentence types. Start some sentences with dependent clauses, use relative clauses to add detail, and employ compound sentences to link related ideas. However, ensure clarity and accuracy. An overly complex sentence that is grammatically incorrect will lower your score.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="modal-verbs" class="mb-8">
-
             <h2 class="section-heading">6. Modal Verbs</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Modal verbs (e.g., can, could, may, might, must, should, will, would, shall) are auxiliary verbs that express modality, such as possibility, ability, permission, obligation, or advice. Using them correctly adds nuance and sophistication to your arguments in IELTS Writing Task 2, allowing you to express degrees of certainty or recommendation.
-
             </p>
-
             <h3 class="sub-sub-section-heading">6.1. Common Modal Verbs and Their Uses:</h3>
-
             <ul>
-
                 <li><strong>Can / Could:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Ability:</span> <div class="example-box">Governments <span class="font-bold">can</span> implement policies to reduce pollution.</div></li>
-
                         <li><span class="font-bold">Possibility:</span> <div class="example-box">The economy <span class="font-bold">could</span> improve next year.</div></li>
-
                         <li><span class="font-bold">Permission:</span> <div class="example-box">Students <span class="font-bold">can</span> use the library facilities.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>May / Might:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Possibility / Probability (less certain than 'could'):</span> <div class="example-box">This approach <span class="font-bold">may</span> lead to unforeseen consequences. <br> The statistics <span class="font-bold">might</span> indicate a shift in consumer behavior.</div></li>
-
                         <li><span class="font-bold">Permission (more formal than 'can'):</span> <div class="example-box">Visitors <span class="font-bold">may</span> enter the exhibition hall.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Must / Have to:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Obligation / Necessity:</span> <div class="example-box">Societies <span class="font-bold">must</span> address the issue of inequality. <br> Individuals <span class="font-bold">have to</span> take responsibility for their waste.</div></li>
-
                         <li><span class="font-bold">Strong deduction:</span> <div class="example-box">The data <span class="font-bold">must</span> be interpreted carefully.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Should / Ought to:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Advice / Recommendation:</span> <div class="example-box">Governments <span class="font-bold">should</span> prioritize public health over economic growth. <br> Citizens <span class="font-bold">ought to</span> be more aware of environmental issues.</div></li>
-
                         <li><span class="font-bold">Expectation:</span> <div class="example-box">The new system <span class="font-bold">should</span> improve efficiency.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Will / Would:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Future (prediction/intention):</span> <div class="example-box">The population <span class="font-bold">will</span> continue to grow.</div></li>
-
                         <li><span class="font-bold">Hypothetical situations (in conditionals):</span> <div class="example-box">If funding were available, the project <span class="font-bold">would</span> be completed sooner.</div></li>
-
                         <li><span class="font-bold">Polite requests/offers:</span> <div class="example-box">This <span class="font-bold">would</span> be a significant improvement.</div></li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">6.2. Common Errors with Modal Verbs:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Using 'to' after a modal verb (except 'ought to').</p>
-
                 <p class="line-through">Students must to study hard.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Students <span class="font-bold">must study</span> hard.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect past forms or combining modals.</p>
-
                 <p class="line-through">He must have went home.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> He <span class="font-bold">must have gone</span> home. (Modal + have + past participle for past deduction).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Confusing 'may' and 'might' for possibility.</p>
-
                 <p class="line-through">It may rain, but I'm not sure.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> It <span class="font-bold">might rain</span>, but I'm not sure. ('Might' often indicates a slightly lower degree of certainty than 'may').</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Modal verbs are excellent for expressing your stance or making recommendations in Task 2 essays. Use them to soften strong claims (e.g., 'This might be a solution' instead of 'This is a solution') or to express obligation/necessity (e.g., 'Governments should consider...'). Variety in modal verb usage can enhance your grammatical range.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="conditionals" class="mb-8">
-
             <h2 class="section-heading">7. Conditionals</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Conditional sentences express cause and effect, hypothetical situations, or unreal conditions. They are vital for developing complex arguments in IELTS Writing Task 2, allowing you to discuss potential outcomes, consequences, or alternative scenarios. There are four main types of conditionals, plus mixed conditionals.
-
             </p>
-
             <h3 class="sub-sub-section-heading">7.1. Types of Conditional Sentences:</h3>
-
             <ul>
-
                 <li><strong>Zero Conditional (Facts and General Truths):</strong>
-
                     <p>Structure: If + Present Simple, Present Simple</p>
-
                     <p>Usage: Describes general truths, scientific facts, or habits where the outcome is always the same.</p>
-
                     <div class="example-box">If you <span class="font-bold">heat</span> water to 100 degrees Celsius, it <span class="font-bold">boils</span>.</div>
-
                     <div class="example-box">If governments <span class="font-bold">fail</span> to address climate change, environmental degradation <span class="font-bold">worsens</span>.</div>
-
                 </li>
-
                 <li><strong>First Conditional (Real and Possible Future Conditions):</strong>
-
                     <p>Structure: If + Present Simple, Will + Base Verb</p>
-
                     <p>Usage: Describes a real or very probable situation in the future and its likely outcome.</p>
-
                     <div class="example-box">If the government <span class="font-bold">invests</span> more in public transport, traffic congestion <span class="font-bold">will decrease</span>.</div>
-
                     <div class="example-box">If individuals <span class="font-bold">adopt</span> sustainable practices, they <span class="font-bold">will contribute</span> to a healthier planet.</div>
-
                 </li>
-
                 <li><strong>Second Conditional (Unreal or Unlikely Present/Future Conditions):</strong>
-
                     <p>Structure: If + Past Simple, Would + Base Verb</p>
-
                     <p>Usage: Describes hypothetical or improbable situations in the present or future, and their imagined results. Often used to discuss ideal scenarios or offer suggestions.</p>
-
                     <div class="example-box">If I <span class="font-bold">were</span> a policymaker, I <span class="font-bold">would prioritize</span> renewable energy. (Note: 'were' is used for all subjects in the 'if' clause for hypothetical situations, though 'was' is sometimes accepted in informal contexts).</div>
-
                     <div class="example-box">If developing countries <span class="font-bold">received</span> more aid, their economies <span class="font-bold">would develop</span> faster.</div>
-
                 </li>
-
                 <li><strong>Third Conditional (Unreal Past Conditions):</strong>
-
                     <p>Structure: If + Past Perfect, Would have + Past Participle</p>
-
                     <p>Usage: Describes hypothetical situations in the past that did not happen, and their imagined past results. Used for regret, criticism, or analyzing past events.</p>
-
                     <div class="example-box">If the company <span class="font-bold">had invested</span> in new technology earlier, it <span class="font-bold">would have avoided</span> bankruptcy.</div>
-
                     <div class="example-box">If governments <span class="font-bold">had implemented</span> stricter regulations, the environmental damage <span class="font-bold">would not have been</span> so severe.</div>
-
                 </li>
-
                 <li><strong>Mixed Conditionals:</strong>
-
                     <p>Usage: Combine elements of different conditional types, typically when a past condition has a present result (Type 3 + Type 2) or a present condition has a past result (Type 2 + Type 3, less common).</p>
-
                     <p>Structure (Past condition, Present result): If + Past Perfect, Would + Base Verb</p>
-
                     <div class="example-box">If I <span class="font-bold">had studied</span> harder (past condition), I <span class="font-bold">would have</span> a better job now (present result).</div>
-
                     <div class="example-box">If the city <span class="font-bold">had planned</span> its infrastructure better (past condition), it <span class="font-bold">would not be experiencing</span> such severe traffic congestion today (present result).</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">7.2. Common Errors with Conditionals:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Mixing tenses incorrectly within a conditional sentence.</p>
-
                 <p class="line-through">If I will study hard, I will pass the exam.</p>
-
                 <p class="correction"><span class="font-bold">Correction (First Conditional):</span> If I <span class="font-bold">study</span> hard, I <span class="font-bold">will pass</span> the exam.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using 'would' in the 'if' clause of a second or third conditional.</p>
-
                 <p class="line-through">If I would have known, I would have helped.</p>
-
                 <p class="correction"><span class="font-bold">Correction (Third Conditional):</span> If I <span class="font-bold">had known</span>, I <span class="font-bold">would have helped</span>.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Incorrectly using 'was' instead of 'were' in hypothetical second conditionals.</p>
-
                 <p class="line-through">If I was rich, I would travel the world.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> If I <span class="font-bold">were</span> rich, I <span class="font-bold">would travel</span> the world. (Formal and preferred for hypothetical 'if' clauses).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Conditional sentences are excellent for demonstrating grammatical range. In Task 2, use them to present solutions, discuss potential consequences, or analyze past events. For example, when proposing solutions to a problem, you could use a first conditional: "If governments invest more in education, crime rates will likely decrease." For discussing hypothetical scenarios, a second conditional is effective: "If individuals were more aware of their carbon footprint, they would make more eco-friendly choices."</p>
-
             </div>
-
         </section>
-
-
 
         <section id="passive-voice" class="mb-8">
-
             <h2 class="section-heading">8. Passive Voice</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 The passive voice is used when the focus is on the action or the recipient of the action rather than the performer of the action. It is particularly useful in academic writing, including IELTS Task 1 (describing processes, trends, or data where the agent is unknown or unimportant) and Task 2 (maintaining objectivity or focusing on the result of an action).
-
             </p>
-
             <h3 class="sub-sub-section-heading">8.1. Structure and Usage:</h3>
-
             <p>Structure: Subject + form of 'to be' + Past Participle (V3)</p>
-
             <ul>
-
                 <li><strong>When the Agent is Unknown or Unimportant:</strong>
-
                     <div class="example-box">Many new buildings <span class="font-bold">were constructed</span> last year. (It's not important who constructed them).</div>
-
                     <div class="example-box">The proposal <span class="font-bold">has been approved</span>.</div>
-
                 </li>
-
                 <li><strong>To Maintain Objectivity (Common in Academic Writing):</strong>
-
                     <div class="example-box">It <span class="font-bold">is believed</span> that climate change is primarily caused by human activities.</div>
-
                     <div class="example-box">Further research <span class="font-bold">is required</span> to confirm these findings.</div>
-
                 </li>
-
                 <li><strong>Describing Processes (IELTS Task 1):</strong>
-
                     <div class="example-box">First, the raw materials <span class="font-bold">are collected</span>. Then, they <span class="font-bold">are transported</span> to the factory.</div>
-
                     <div class="example-box">The water <span class="font-bold">is purified</span> through several stages.</div>
-
                 </li>
-
                 <li><strong>Focusing on the Action or Result:</strong>
-
                     <div class="example-box">The city's infrastructure <span class="font-bold">was severely damaged</span> by the earthquake.</div>
-
                     <div class="example-box">New regulations <span class="font-bold">will be introduced</span> next year.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">8.2. Passive Voice Across Tenses:</h3>
-
             <p>The passive voice can be formed in various tenses:</p>
-
             <ul>
-
                 <li><strong>Present Simple Passive:</strong> is/are + V3
-
                     <div class="example-box">Coffee <span class="font-bold">is grown</span> in Brazil.</div>
-
                 </li>
-
                 <li><strong>Past Simple Passive:</strong> was/were + V3
-
                     <div class="example-box">The bridge <span class="font-bold">was built</span> in 1990.</div>
-
                 </li>
-
                 <li><strong>Present Perfect Passive:</strong> has/have been + V3
-
                     <div class="example-box">The project <span class="font-bold">has been completed</span>.</div>
-
                 </li>
-
                 <li><strong>Future Simple Passive:</strong> will be + V3
-
                     <div class="example-box">New policies <span class="font-bold">will be implemented</span>.</div>
-
                 </li>
-
                 <li><strong>Modal Passive:</strong> modal + be + V3
-
                     <div class="example-box">Solutions <span class="font-bold">must be found</span>.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">8.3. Common Errors with Passive Voice:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Missing the 'to be' verb or using the wrong form.</p>
-
                 <p class="line-through">The report published last week.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The report <span class="font-bold">was published</span> last week.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using the active voice when passive is more appropriate for formality or focus.</p>
-
                 <p class="line-through">Researchers conducted the study.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The study <span class="font-bold">was conducted</span> by researchers. (If focus is on study, not researchers).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Overuse of passive voice, making writing unclear or cumbersome.</p>
-
                 <p class="line-through">It is believed by many people that the government should take action.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Many people <span class="font-bold">believe</span> that the government should take action. (Sometimes active is clearer and more direct).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Strategic use of the passive voice can significantly improve the academic tone of your writing. It is particularly useful in Task 1 for describing processes (e.g., "Water is filtered...") and in Task 2 for presenting general opinions or findings without attributing them to a specific person (e.g., "It is argued that..."). However, avoid overusing it, as it can make your writing less direct and engaging. A balance between active and passive voice is ideal.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="relative-clauses" class="mb-8">
-
             <h2 class="section-heading">9. Relative Clauses</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Relative clauses (also known as adjective clauses) provide additional information about a noun or pronoun. They are essential for forming complex sentences and demonstrating grammatical range in IELTS Writing. They begin with relative pronouns (who, whom, whose, which, that) or relative adverbs (where, when, why).
-
             </p>
-
             <h3 class="sub-sub-section-heading">9.1. Types of Relative Clauses:</h3>
-
             <ul>
-
                 <li><strong>Defining Relative Clauses:</strong> Provide essential information necessary to identify the noun. Without this clause, the meaning of the sentence would be unclear. No commas are used.
-
                     <div class="example-box">The student <span class="font-bold">who achieved the highest score</span> received a scholarship. (Identifies which student)</div>
-
                     <div class="example-box">This is the policy <span class="font-bold">that was implemented last year</span>. (Identifies which policy)</div>
-
                 </li>
-
                 <li><strong>Non-defining Relative Clauses:</strong> Provide extra, non-essential information about the noun. The sentence would still make sense without this clause. They are always separated by commas.
-
                     <div class="example-box">My brother, <span class="font-bold">who lives in Canada</span>, is visiting next month. (My brother is already identified; the clause adds extra info).</div>
-
                     <div class="example-box">The new report, <span class="font-bold">which was published yesterday</span>, highlights environmental concerns. (The report is already identified).</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">9.2. Relative Pronouns and Adverbs:</h3>
-
             <ul>
-
                 <li><span class="font-bold">Who:</span> Refers to people (subject).
-
                     <div class="example-box">The individuals <span class="font-bold">who advocate for renewable energy</span> are often passionate.</div>
-
                 </li>
-
                 <li><span class="font-bold">Whom:</span> Refers to people (object). More formal, often replaced by 'who' in informal contexts.
-
                     <div class="example-box">The expert, <span class="font-bold">whom I interviewed</span>, provided valuable insights.</div>
-
                 </li>
-
                 <li><span class="font-bold">Whose:</span> Shows possession (for people or things).
-
                     <div class="example-box">The company, <span class="font-bold">whose profits declined</span>, decided to restructure.</div>
-
                 </li>
-
                 <li><span class="font-bold">Which:</span> Refers to things or animals.
-
                     <div class="example-box">The new policy, <span class="font-bold">which aims to reduce waste</span>, has been well-received.</div>
-
                 </li>
-
                 <li><span class="font-bold">That:</span> Refers to people or things (only in defining clauses). Cannot be used in non-defining clauses.
-
                     <div class="example-box">This is a problem <span class="font-bold">that requires immediate attention</span>.</div>
-
                 </li>
-
                 <li><span class="font-bold">Where:</span> Refers to places.
-
                     <div class="example-box">The city <span class="font-bold">where I grew up</span> has changed significantly.</div>
-
                 </li>
-
                 <li><span class="font-bold">When:</span> Refers to time.
-
                     <div class="example-box">There was a period <span class="font-bold">when unemployment rates were very high</span>.</div>
-
                 </li>
-
                 <li><span class="font-bold">Why:</span> Refers to reason.
-
                     <div class="example-box">The reason <span class="font-bold">why people migrate</span> is often complex.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">9.3. Common Errors with Relative Clauses:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Missing relative pronoun or incorrect choice.</p>
-
                 <p class="line-through">The book I read was interesting.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The book <span class="font-bold">that/which</span> I read was interesting. (Often omitted in informal English, but good to include in formal writing).</p>
-
                 <p class="line-through">The person which helped me was kind.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The person <span class="font-bold">who</span> helped me was kind.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect punctuation (especially with non-defining clauses).</p>
-
                 <p class="line-through">My car which is old needs repair.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> My car, <span class="font-bold">which is old</span>, needs repair. (Non-defining, needs commas).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Using 'that' in non-defining clauses.</p>
-
                 <p class="line-through">The company, that is based in London, announced new products.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The company, <span class="font-bold">which</span> is based in London, announced new products.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Using relative clauses effectively allows you to combine shorter sentences into more complex and sophisticated ones, which is a key requirement for higher band scores. Practice distinguishing between defining and non-defining clauses to ensure correct punctuation. This will significantly improve your grammatical range and clarity.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="prepositions" class="mb-8">
-
             <h2 class="section-heading">10. Prepositions</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Prepositions are words that show the relationship between a noun or pronoun and other words in a sentence. They indicate location, direction, time, or other relationships. While seemingly small, incorrect preposition usage is a very common error for non-native speakers and can obscure meaning. Mastering prepositions demonstrates precision.
-
             </p>
-
             <h3 class="sub-sub-section-heading">10.1. Common Prepositions and Their Uses:</h3>
-
             <ul>
-
                 <li><strong>Prepositions of Time:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">At:</span> specific time (at 3 PM, at midnight, at dawn), holidays (at Christmas).
-
                             <div class="example-box">The meeting is scheduled <span class="font-bold">at</span> 10 AM.</div>
-
                         </li>
-
                         <li><span class="font-bold">On:</span> specific days (on Monday), dates (on 25th December), parts of a specific day (on Friday morning).
-
                             <div class="example-box">The report was submitted <span class="font-bold">on</span> time.</div>
-
                         </li>
-
                         <li><span class="font-bold">In:</span> months (in July), years (in 2023), seasons (in summer), periods of the day (in the morning), longer periods (in the future, in the 21st century).
-
                             <div class="example-box">The project will be completed <span class="font-bold">in</span> three months.</div>
-
                         </li>
-
                         <li><span class="font-bold">For:</span> duration (for two hours, for a decade).
-
                             <div class="example-box">Researchers have been studying this phenomenon <span class="font-bold">for</span> many years.</div>
-
                         </li>
-
                         <li><span class="font-bold">Since:</span> from a point in time until now (since 2000, since yesterday).
-
                             <div class="example-box">Unemployment rates have increased <span class="font-bold">since</span> the economic downturn.</div>
-
                         </li>
-
                         <li><span class="font-bold">By:</span> 'not later than' a specific time.
-
                             <div class="example-box">The deadline for applications is <span class="font-bold">by</span> Friday.</div>
-
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Prepositions of Place/Location:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">At:</span> specific point (at the bus stop, at the corner, at home, at school).
-
                             <div class="example-box">The conference will be held <span class="font-bold">at</span> the convention center.</div>
-
                         </li>
-
                         <li><span class="font-bold">On:</span> surface (on the table), street/road (on Oxford Street), public transport (on a bus/train/plane).
-
                             <div class="example-box">The book is <span class="font-bold">on</span> the shelf.</div>
-
                         </li>
-
                         <li><span class="font-bold">In:</span> enclosed space (in the room, in the box), large areas (in a city, in a country), vehicles (in a car/taxi).
-
                             <div class="example-box">Many people live <span class="font-bold">in</span> urban areas.</div>
-
                         </li>
-
                         <li><span class="font-bold">Above / Below:</span> higher/lower than something else.
-
                             <div class="example-box">The temperature rose <span class="font-bold">above</span> average.</div>
-
                         </li>
-
                         <li><span class="font-bold">Between / Among:</span> between two things, among three or more.
-
                             <div class="example-box">The negotiations took place <span class="font-bold">between</span> the two parties. <br> Cooperation <span class="font-bold">among</span> nations is essential.</div>
-
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Prepositions of Direction:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">To:</span> movement towards a destination.
-
                             <div class="example-box">People migrate <span class="font-bold">to</span> cities for better opportunities.</div>
-
                         </li>
-
                         <li><span class="font-bold">Into:</span> movement inside something.
-
                             <div class="example-box">The data was compiled <span class="font-bold">into</span> a comprehensive report.</div>
-
                         </li>
-
                         <li><span class="font-bold">From:</span> origin.
-
                             <div class="example-box">The statistics were gathered <span class="font-bold">from</span> various sources.</div>
-
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Fixed Prepositional Phrases / Collocations:</strong> Many verbs, adjectives, and nouns are followed by specific prepositions. Learning these is crucial.
-
                     <ul>
-
                         <li><span class="font-bold">Agree with</span> (a person), <span class="font-bold">agree on</span> (a topic), <span class="font-bold">agree to</span> (a proposal).</li>
-
                         <li><span class="font-bold">Responsible for</span>, <span class="font-bold">aware of</span>, <span class="font-bold">dependent on</span>.</li>
-
                         <li><span class="font-bold">Demand for</span>, <span class="font-bold">impact on</span>, <span class="font-bold">solution to</span>.</li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">10.2. Common Errors with Prepositions:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Incorrect preposition of time.</p>
-
                 <p class="line-through">I will meet you on next week.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> I will meet you <span class="font-bold">next week</span>. (No preposition needed with 'next' or 'last').</p>
-
                 <p class="line-through">The event happened in 5 PM.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The event happened <span class="font-bold">at</span> 5 PM.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect preposition of place/direction.</p>
-
                 <p class="line-through">He lives in the street.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> He lives <span class="font-bold">on</span> the street (if referring to the address) or <span class="font-bold">in</span> the street (if homeless, though 'on the street' is more common). For a specific address: He lives <span class="font-bold">at</span> 10 Downing Street.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Misusing fixed prepositional phrases.</p>
-
                 <p class="line-through">There is a solution for this problem.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> There is a <span class="font-bold">solution to</span> this problem.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Prepositional errors are often subtle but can affect clarity. While there are rules, many prepositions are learned through exposure and memorization of common collocations. Pay attention to the prepositions used with common verbs (e.g., 'depend on', 'listen to', 'agree with/on/to'), adjectives ('responsible for', 'aware of'), and nouns ('impact on', 'demand for'). Reading widely and noting these patterns will significantly help.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="punctuation" class="mb-8">
-
             <h2 class="section-heading">11. Punctuation</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Correct punctuation is essential for clarity, coherence, and grammatical accuracy in IELTS Writing. It helps organize your thoughts, separate ideas, and guide the reader through your arguments. Misuse of punctuation can lead to confusion and lower your score.
-
             </p>
-
             <h3 class="sub-sub-section-heading">11.1. Key Punctuation Marks:</h3>
-
             <ul>
-
                 <li><strong>Full Stop (Period):</strong> Used at the end of a declarative sentence.
-
                     <div class="example-box">The global population is increasing.</div>
-
                 </li>
-
                 <li><strong>Comma:</strong>
-
                     <ul>
-
                         <li>To separate items in a list: <div class="example-box">Education, healthcare, <span class="font-bold">and</span> infrastructure are vital. (Oxford comma is optional but recommended for clarity).</div></li>
-
                         <li>After an introductory phrase or clause: <div class="example-box"><span class="font-bold">In conclusion,</span> technology has transformed society. <br> <span class="font-bold">Although challenging,</span> the task was completed.</div></li>
-
                         <li>To separate independent clauses joined by a coordinating conjunction (FANBOYS): <div class="example-box">The economy is growing, <span class="font-bold">but</span> unemployment remains high.</div></li>
-
                         <li>To set off non-essential information (non-defining relative clauses, appositives): <div class="example-box">My brother, <span class="font-bold">a doctor</span>, works long hours.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Semicolon:</strong> Used to join two closely related independent clauses without a coordinating conjunction.
-
                     <div class="example-box">The first chart shows a decline; the second illustrates a recovery.</div>
-
                     <div class="example-box">Many students face financial difficulties; consequently, they often work part-time.</div>
-
                 </li>
-
                 <li><strong>Colon:</strong> Used to introduce a list, an explanation, an example, or a quotation.
-
                     <div class="example-box">There are three main factors: cost, accessibility, and quality.</div>
-
                     <div class="example-box">The problem is clear: immediate action is required.</div>
-
                 </li>
-
                 <li><strong>Apostrophe:</strong>
-
                     <ul>
-
                         <li>For possession: <div class="example-box">The <span class="font-bold">government's</span> policies, <span class="font-bold">students'</span> opinions.</div></li>
-
                         <li>For contractions (avoid in formal IELTS writing): <div class="example-box">It's (it is), don't (do not). (Avoid in IELTS)</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Quotation Marks:</strong> To indicate direct speech or to highlight a specific term (use sparingly for terms).
-
                     <div class="example-box">As Smith (2020) stated, "Education is key to development."</div>
-
                 </li>
-
                 <li><strong>Hyphen:</strong> To join words to form a compound adjective (e.g., well-known, long-term, decision-making).
-
                     <div class="example-box">This is a <span class="font-bold">long-term</span> solution.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">11.2. Common Errors with Punctuation:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Comma Splice (joining two independent clauses with only a comma).</p>
-
                 <p class="line-through">The internet is powerful, it has revolutionized communication.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The internet is powerful; it has revolutionized communication.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The internet is powerful, <span class="font-bold">and</span> it has revolutionized communication.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Run-on Sentence (no punctuation between independent clauses).</p>
-
                 <p class="line-through">Many people work from home this trend is increasing.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Many people work from home. This trend is increasing.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Incorrect apostrophe use (especially with plurals vs. possessives).</p>
-
                 <p class="line-through">The students opinions are important.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The <span class="font-bold">students'</span> opinions are important. (Plural possessive).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 4: Missing commas after introductory elements.</p>
-
                 <p class="line-through">However many challenges remain.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">However,</span> many challenges remain.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Punctuation is a critical component of grammatical accuracy and coherence. Pay particular attention to commas, semicolons, and full stops. Using a variety of appropriate punctuation marks (e.g., semicolons to link related ideas, colons to introduce explanations) can contribute to a higher score. Avoid contractions and exclamation marks in formal academic writing.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="gerunds-infinitives" class="mb-8">
-
             <h2 class="section-heading">12. Gerunds and Infinitives</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Gerunds (verb + -ing acting as a noun) and infinitives (to + base verb) are non-finite verb forms that can function as nouns, adjectives, or adverbs. Correctly using them demonstrates a sophisticated command of English grammar and allows for more varied and concise sentence structures.
-
             </p>
-
             <h3 class="sub-sub-section-heading">12.1. Gerunds:</h3>
-
             <p>A gerund is the -ing form of a verb used as a noun. It can be the subject of a sentence, the object of a verb, or the object of a preposition.</p>
-
             <ul>
-
                 <li><strong>As Subject:</strong>
-
                     <div class="example-box"><span class="font-bold">Recycling</span> is crucial for environmental protection.</div>
-
                 </li>
-
                 <li><strong>As Object of a Verb:</strong> Follows certain verbs (e.g., enjoy, finish, mind, avoid, consider, suggest, recommend, admit, deny, risk).
-
                     <div class="example-box">Many people <span class="font-bold">enjoy reading</span> books.</div>
-
                     <div class="example-box">The government <span class="font-bold">considered implementing</span> stricter laws.</div>
-
                 </li>
-
                 <li><strong>As Object of a Preposition:</strong> Always follows a preposition.
-
                     <div class="example-box">They are interested <span class="font-bold">in promoting</span> sustainable development.</div>
-
                     <div class="example-box">He is responsible <span class="font-bold">for managing</span> the project.</div>
-
                 </li>
-
                 <li><strong>After Phrasal Verbs:</strong>
-
                     <div class="example-box">She gave <span class="font-bold">up smoking</span>.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">12.2. Infinitives:</h3>
-
             <p>An infinitive is the base form of a verb preceded by 'to' (e.g., to go, to study). It can function as a noun, an adjective, or an adverb.</p>
-
             <ul>
-
                 <li><strong>As Subject (less common in formal writing, often replaced by 'It is...'):</strong>
-
                     <div class="example-box"><span class="font-bold">To achieve</span> success requires dedication. (More common: It is important to achieve success.)</div>
-
                 </li>
-
                 <li><strong>As Object of a Verb:</strong> Follows certain verbs (e.g., agree, decide, hope, plan, promise, refuse, want, wish, learn, manage, afford).
-
                     <div class="example-box">Governments <span class="font-bold">aim to reduce</span> carbon emissions.</div>
-
                     <div class="example-box">They <span class="font-bold">decided to implement</span> new policies.</div>
-
                 </li>
-
                 <li><strong>To Express Purpose (as an adverb):</strong>
-
                     <div class="example-box">She studies hard <span class="font-bold">to pass</span> the exam.</div>
-
                     <div class="example-box">New measures were introduced <span class="font-bold">to improve</span> public safety.</div>
-
                 </li>
-
                 <li><strong>After Adjectives:</strong>
-
                     <div class="example-box">It is difficult <span class="font-bold">to solve</span> this problem.</div>
-
                     <div class="example-box">Students are eager <span class="font-bold">to learn</span>.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">12.3. Verbs Followed by Both Gerunds and Infinitives (with change in meaning):</h3>
-
             <p>Some verbs can be followed by either a gerund or an infinitive, but the meaning changes.</p>
-
             <ul>
-
                 <li><strong>Stop:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Stop + Gerund:</span> cease an activity. <div class="example-box">He <span class="font-bold">stopped smoking</span>. (He no longer smokes).</div></li>
-
                         <li><span class="font-bold">Stop + Infinitive:</span> stop one activity to do another. <div class="example-box">He <span class="font-bold">stopped to smoke</span>. (He paused his current activity to smoke).</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Remember:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Remember + Gerund:</span> recall a past action. <div class="example-box">I <span class="font-bold">remember visiting</span> that museum.</div></li>
-
                         <li><span class="font-bold">Remember + Infinitive:</span> remember to do something in the future. <div class="example-box">Please <span class="font-bold">remember to send</span> the email.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Try:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Try + Gerund:</span> experiment with a method. <div class="example-box">You should <span class="font-bold">try eating</span> healthier.</div></li>
-
                         <li><span class="font-bold">Try + Infinitive:</span> attempt to do something difficult. <div class="example-box">I <span class="font-bold">tried to lift</span> the heavy box.</div></li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">12.4. Common Errors with Gerunds and Infinitives:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Using an infinitive where a gerund is required (especially after prepositions).</p>
-
                 <p class="line-through">They are interested in to learn English.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> They are interested <span class="font-bold">in learning</span> English.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using a gerund where an infinitive is required (especially after certain verbs).</p>
-
                 <p class="line-through">We decided going to the park.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> We <span class="font-bold">decided to go</span> to the park.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Confusing the meaning when verbs can take both forms.</p>
-
                 <p class="line-through">I stopped to smoke a lot last year.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> I <span class="font-bold">stopped smoking</span> a lot last year. (Unless you meant you stopped an activity *in order to* smoke).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Correctly using gerunds and infinitives adds to the grammatical range and accuracy of your writing. Pay close attention to the verbs and prepositions that precede them. A common strategy is to learn lists of verbs that are typically followed by gerunds (e.g., avoid, suggest) and those followed by infinitives (e.g., agree, decide). This will help you avoid common errors and write more naturally.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="adjectives-adverbs" class="mb-8">
-
             <h2 class="section-heading">13. Adjective and Adverb Use</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Adjectives and adverbs are crucial for adding detail, precision, and descriptive power to your writing. While adjectives modify nouns and pronouns, adverbs modify verbs, adjectives, or other adverbs. Correctly distinguishing and using them enhances clarity and contributes to a higher lexical resource and grammatical range score.
-
             </p>
-
             <h3 class="sub-sub-section-heading">13.1. Adjectives:</h3>
-
             <p>Adjectives describe or modify nouns and pronouns. They answer questions like "which one?", "what kind?", or "how many?".</p>
-
             <ul>
-
                 <li><strong>Placement:</strong>
-
                     <ul>
-
                         <li>Before the noun they modify: <div class="example-box">a <span class="font-bold">significant</span> increase, <span class="font-bold">complex</span> problems.</div></li>
-
                         <li>After linking verbs (e.g., be, seem, appear, feel, look, sound, taste, smell, become): <div class="example-box">The situation <span class="font-bold">seems difficult</span>. The policy <span class="font-bold">is effective</span>.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Order of Adjectives:</strong> When multiple adjectives describe a noun, they generally follow a specific order (Opinion-Size-Age-Shape-Color-Origin-Material-Purpose Noun).
-
                     <div class="example-box">a <span class="font-bold">beautiful</span> <span class="font-bold">large</span> <span class="font-bold">old</span> <span class="font-bold">round</span> <span class="font-bold">brown</span> <span class="font-bold">wooden</span> table.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">13.2. Adverbs:</h3>
-
             <p>Adverbs modify verbs, adjectives, or other adverbs. They answer questions like "how?", "when?", "where?", "to what extent?", or "how often?". Many adverbs are formed by adding '-ly' to an adjective (e.g., quick -> quickly, careful -> carefully), but not all words ending in '-ly' are adverbs (e.g., friendly is an adjective). Some adverbs have the same form as their adjective (e.g., fast, hard, late, early).</p>
-
             <ul>
-
                 <li><strong>Types of Adverbs:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Adverbs of Manner:</span> (how) <div class="example-box">The economy grew <span class="font-bold">rapidly</span>. They discussed the issue <span class="font-bold">carefully</span>.</div></li>
-
                         <li><span class="font-bold">Adverbs of Time:</span> (when) <div class="example-box">The report was submitted <span class="font-bold">yesterday</span>. The issue will be addressed <span class="font-bold">soon</span>.</div></li>
-
                         <li><span class="font-bold">Adverbs of Place:</span> (where) <div class="example-box">Students study <span class="font-bold">here</span>. The problem exists <span class="font-bold">globally</span>.</div></li>
-
                         <li><span class="font-bold">Adverbs of Degree:</span> (to what extent) <div class="example-box">The issue is <span class="font-bold">extremely</span> important. The data is <span class="font-bold">highly</span> significant.</div></li>
-
                         <li><span class="font-bold">Adverbs of Frequency:</span> (how often) <div class="example-box">Governments <span class="font-bold">often</span> implement new policies.</div></li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Placement of Adverbs:</strong> Depends on the type of adverb.
-
                     <ul>
-
                         <li>Adverbs of manner usually go after the verb or object: <div class="example-box">He drives <span class="font-bold">carefully</span>. He solved the problem <span class="font-bold">easily</span>.</div></li>
-
                         <li>Adverbs of frequency usually go before the main verb, or after 'be' verb: <div class="example-box">They <span class="font-bold">often</span> discuss this. She is <span class="font-bold">always</span> punctual.</div></li>
-
                         <li>Adverbs of time and place can go at the beginning or end of a sentence: <div class="example-box"><span class="font-bold">Yesterday</span>, I read a report. I read a report <span class="font-bold">yesterday</span>.</div></li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">13.3. Common Errors with Adjectives and Adverbs:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Using an adjective instead of an adverb to modify a verb.</p>
-
                 <p class="line-through">The economy grew quick.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The economy grew <span class="font-bold">quickly</span>.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using an adverb instead of an adjective after a linking verb.</p>
-
                 <p class="line-through">The solution seems effectively.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The solution seems <span class="font-bold">effective</span>.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Confusing words that have both adjective and adverb forms (e.g., hard, fast, late).</p>
-
                 <p class="line-through">He works hardly.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> He works <span class="font-bold">hard</span>. ('Hardly' means 'almost not').</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Using a wide range of appropriate adjectives and adverbs can enhance both your lexical resource and grammatical range scores. Adverbs are particularly useful for expressing your stance (e.g., 'undoubtedly', 'arguably', 'significantly') or for describing trends in Task 1 (e.g., 'rapidly', 'gradually', 'steadily'). Ensure you understand the difference between adjectives and adverbs, especially for words that look similar.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="comparatives-superlatives" class="mb-8">
-
             <h2 class="section-heading">14. Comparatives and Superlatives</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Comparatives and superlatives are forms of adjectives and adverbs used to compare two or more things. They are essential for describing trends, making comparisons in Task 1 (e.g., comparing data points), and presenting arguments in Task 2 (e.g., arguing which solution is 'better' or 'most effective').
-
             </p>
-
             <h3 class="sub-sub-section-heading">14.1. Comparative Forms:</h3>
-
             <p>Used to compare two things. Structure depends on the length of the adjective/adverb.</p>
-
             <ul>
-
                 <li><strong>Short Adjectives/Adverbs (1-2 syllables):</strong> Add '-er' (e.g., taller, faster, harder).
-
                     <div class="example-box">The new policy is <span class="font-bold">simpler</span> than the old one.</div>
-
                     <div class="example-box">Traffic moved <span class="font-bold">slower</span> today.</div>
-
                 </li>
-
                 <li><strong>Longer Adjectives/Adverbs (2+ syllables):</strong> Use 'more' (e.g., more important, more effectively).
-
                     <div class="example-box">Environmental issues are <span class="font-bold">more important</span> than ever.</div>
-
                     <div class="example-box">The company performed <span class="font-bold">more successfully</span> this quarter.</div>
-
                 </li>
-
                 <li><strong>Irregular Forms:</strong> Some common adjectives/adverbs have irregular comparative forms.
-
                     <div class="example-box">good/well -> <span class="font-bold">better</span>; bad/badly -> <span class="font-bold">worse</span>; far -> <span class="font-bold">farther/further</span>; little -> <span class="font-bold">less</span>; much/many -> <span class="font-bold">more</span>.</div>
-
                 </li>
-
                 <li><strong>Structure for Comparison:</strong> Adjective/Adverb + <span class="font-bold">than</span>
-
                     <div class="example-box">The population in urban areas is growing <span class="font-bold">faster than</span> in rural areas.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">14.2. Superlative Forms:</h3>
-
             <p>Used to compare three or more things, indicating the highest or lowest degree. Always use 'the' before the superlative form.</p>
-
             <ul>
-
                 <li><strong>Short Adjectives/Adverbs (1-2 syllables):</strong> Add '-est' (e.g., the tallest, the fastest, the hardest).
-
                     <div class="example-box">This is <span class="font-bold">the simplest</span> solution.</div>
-
                     <div class="example-box">It was <span class="font-bold">the quickest</span> way to solve the problem.</div>
-
                 </li>
-
                 <li><strong>Longer Adjectives/Adverbs (2+ syllables):</strong> Use 'most' (e.g., the most important, the most effectively).
-
                     <div class="example-box">Climate change is <span class="font-bold">the most significant</span> challenge facing humanity.</div>
-
                     <div class="example-box">The team worked <span class="font-bold">the most efficiently</span> on this project.</div>
-
                 </li>
-
                 <li><strong>Irregular Forms:</strong>
-
                     <div class="example-box">good/well -> <span class="font-bold">best</span>; bad/badly -> <span class="font-bold">worst</span>; far -> <span class="font-bold">farthest/furthest</span>; little -> <span class="font-bold">least</span>; much/many -> <span class="font-bold">most</span>.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">14.3. Common Errors with Comparatives and Superlatives:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Double comparison (using both '-er' and 'more').</p>
-
                 <p class="line-through">This method is more easier.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> This method is <span class="font-bold">easier</span>.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Missing 'than' in comparatives or 'the' in superlatives.</p>
-
                 <p class="line-through">The urban population grew faster rural areas.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The urban population grew <span class="font-bold">faster than</span> rural areas.</p>
-
                 <p class="line-through">This is most effective solution.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> This is <span class="font-bold">the most effective</span> solution.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Incorrectly forming irregular comparatives/superlatives.</p>
-
                 <p class="line-through">He performed gooder than others.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> He performed <span class="font-bold">better than</span> others.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Comparatives and superlatives are particularly useful in Task 1 for describing trends and comparing data points (e.g., "The sales were highest in July," "Category A increased more significantly than Category B"). In Task 2, they help you to argue for the superiority or inferiority of ideas. Ensure you apply the correct rules for short vs. long adjectives/adverbs and memorize the irregular forms.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="coherence-cohesion" class="mb-8">
-
             <h2 class="section-heading">15. Coherence and Cohesion (Grammar Aspects)</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 While Coherence and Cohesion is a separate criterion in IELTS, grammatical elements play a significant role in achieving it. This section focuses on how grammatical structures contribute to the logical flow and connectivity of your ideas, helping your writing appear organized and easy to follow.
-
             </p>
-
             <h3 class="sub-sub-section-heading">15.1. Key Grammatical Elements for Cohesion:</h3>
-
             <ul>
-
                 <li><strong>Reference Devices (Pronouns, Demonstratives):</strong> Using pronouns (he, she, it, they, this, these, those) to refer back to previously mentioned nouns, avoiding repetition.
-
                     <div class="example-box">Many students face financial challenges. <span class="font-bold">They</span> often work part-time to support <span class="font-bold">themselves</span>.</div>
-
                     <div class="example-box">The government introduced a new policy. <span class="font-bold">This</span> measure aims to reduce unemployment.</div>
-
                 </li>
-
                 <li><strong>Substitution:</strong> Replacing a word or phrase with a simpler one to avoid repetition.
-
                     <div class="example-box">Some argue that online education is superior to traditional schooling. Others do <span class="font-bold">so</span> because of its flexibility. (Replacing 'argue that online education is superior to traditional schooling').</div>
-
                 </li>
-
                 <li><strong>Ellipsis:</strong> Omitting words or phrases when the meaning is clear from the context.
-
                     <div class="example-box">Some people prefer working from home; others do <span class="font-bold">not</span>. (Omitting 'prefer working from home').</div>
-
                 </li>
-
                 <li><strong>Conjunctions and Conjunctive Adverbs (Linking Words):</strong> Using appropriate linking words to show relationships between ideas (cause, effect, contrast, addition, sequence, etc.).
-
                     <ul>
-
                         <li><span class="font-bold">Addition:</span> Furthermore, Moreover, In addition, Additionally</li>
-
                         <li><span class="font-bold">Contrast:</span> However, Nevertheless, On the other hand, In contrast, Although, While</li>
-
                         <li><span class="font-bold">Cause/Effect:</span> Therefore, Consequently, As a result, Due to, Since, Because</li>
-
                         <li><span class="font-bold">Example:</span> For example, For instance, Such as, To illustrate</li>
-
                         <li><span class="font-bold">Summary/Conclusion:</span> In conclusion, To summarize, Overall, In essence</li>
-
                     </ul>
-
                     <div class="example-box">The cost of living has increased significantly. <span class="font-bold">Consequently</span>, many families struggle financially.</div>
-
                     <div class="example-box"><span class="font-bold">Although</span> public transport is efficient, many still prefer private cars.</div>
-
                 </li>
-
                 <li><strong>Parallelism:</strong> Using similar grammatical structures for similar ideas (covered in detail in the next section). This creates balance and readability.
-
                     <div class="example-box">The policy aims <span class="font-bold">to reduce crime</span>, <span class="font-bold">to improve education</span>, and <span class="font-bold">to boost the economy</span>.</div>
-
                 </li>
-
                 <li><strong>Tense Consistency:</strong> Maintaining consistent tenses within a paragraph or section unless there is a clear reason for a shift. This ensures a clear timeline.
-
                     <div class="example-box">The chart <span class="font-bold">shows</span> a decline in sales from 2000 to 2005, and then the figure <span class="font-bold">recovered</span> slightly by 2010. (Consistent past tense for past data).</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">15.2. Common Errors Affecting Cohesion:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Vague pronoun reference.</p>
-
                 <p class="line-through">The government introduced new laws to combat pollution. They are very strict.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The government introduced new laws to combat pollution. <span class="font-bold">These laws</span> are very strict. (Clarifies what 'they' refers to).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Overuse or misuse of linking words.</p>
-
                 <p class="line-through">Firstly, pollution is a problem. Secondly, therefore, it affects health.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> Firstly, pollution is a problem. <span class="font-bold">Secondly</span>, it affects health. (Avoid redundant linking words).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Inconsistent tense usage.</p>
-
                 <p class="line-through">In 1990, the population was 10 million, and then it increases to 12 million by 2000.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> In 1990, the population <span class="font-bold">was</span> 10 million, and then it <span class="font-bold">increased</span> to 12 million by 2000. (Maintain past tense).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>While coherence and cohesion are about the logical flow of ideas, grammatical tools are essential for achieving this. Use a variety of reference devices and linking words to connect your sentences and paragraphs smoothly. Practice using complex sentences with appropriate conjunctions and relative clauses to show relationships between ideas, rather than just listing them. This will make your essay much easier to follow and more persuasive.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="parallelism" class="mb-8">
-
             <h2 class="section-heading">16. Parallelism</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Parallelism (also known as parallel structure) is the repetition of a chosen grammatical form within a sentence or a series of sentences. By making sure that phrases or clauses are grammatically similar, you create a sense of balance, rhythm, and clarity in your writing. This is particularly important for lists, comparisons, and compound structures.
-
             </p>
-
             <h3 class="sub-sub-section-heading">16.1. Principles of Parallelism:</h3>
-
             <ul>
-
                 <li><strong>In Lists:</strong> All items in a list should have the same grammatical form (e.g., all nouns, all gerunds, all infinitives, all clauses).
-
                     <div class="example-box">The responsibilities of the government include <span class="font-bold">providing education</span>, <span class="font-bold">ensuring healthcare</span>, and <span class="font-bold">maintaining security</span>. (All gerunds)</div>
-
                     <div class="example-box">Students benefit from activities that are <span class="font-bold">engaging</span>, <span class="font-bold">interactive</span>, and <span class="font-bold">educational</span>. (All adjectives)</div>
-
                 </li>
-
                 <li><strong>In Comparisons:</strong> The elements being compared should be grammatically parallel.
-
                     <div class="example-box">Working from home is often <span class="font-bold">more flexible than working</span> in an office. (Gerund phrase vs. gerund phrase)</div>
-
                     <div class="example-box">The cost of living in the city is higher <span class="font-bold">than that in rural areas</span>. (Noun phrase vs. noun phrase)</div>
-
                 </li>
-
                 <li><strong>With Correlative Conjunctions:</strong> When using pairs like 'either...or', 'neither...nor', 'not only...but also', 'both...and', the grammatical structure following each part of the conjunction should be parallel.
-
                     <div class="example-box">The new policy aims <span class="font-bold">not only to reduce crime but also to improve public safety</span>. (Both are infinitive phrases)</div>
-
                     <div class="example-box">Students should consider <span class="font-bold">either studying abroad or gaining work experience</span>. (Both are gerund phrases)</div>
-
                 </li>
-
                 <li><strong>In Clauses:</strong> When connecting clauses, ensure their structure is parallel.
-
                     <div class="example-box">The report highlighted <span class="font-bold">what caused the problem</span> and <span class="font-bold">how it could be solved</span>. (Both are noun clauses)</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">16.2. Common Errors with Parallelism:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Mixing grammatical forms in a list.</p>
-
                 <p class="line-through">The benefits include improving health, economic growth, and it creates jobs.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The benefits include <span class="font-bold">improving health</span>, <span class="font-bold">fostering economic growth</span>, and <span class="font-bold">creating jobs</span>. (All gerund phrases).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Lack of parallelism in comparisons.</p>
-
                 <p class="line-through">The weather in summer is hotter than winter.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The weather in summer is hotter than <span class="font-bold">that in winter</span>. (Comparing 'weather' to 'weather', not 'weather' to 'winter').</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Incorrect parallelism with correlative conjunctions.</p>
-
                 <p class="line-through">The government is not only focusing on education but also healthcare improvement.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The government is focusing <span class="font-bold">not only on education but also on healthcare improvement</span>. (Both are prepositional phrases). <br> <span class="font-bold">Alternatively:</span> The government is <span class="font-bold">not only focusing on education but also improving healthcare</span>. (Both are verb phrases).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Using parallel structure enhances the clarity, readability, and sophistication of your writing, contributing to both grammatical range and coherence. It makes your arguments sound more balanced and professional. Always review your lists and comparisons to ensure that the elements are grammatically consistent. This is a subtle but powerful way to improve your writing quality.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="inversion" class="mb-8">
-
             <h2 class="section-heading">17. Inversion</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Inversion is a grammatical structure where the usual order of subject and verb is reversed, often for emphasis or to create a more formal or dramatic tone. While not always necessary, strategic use of inversion can demonstrate a high level of grammatical control and add variety to your sentence structures in IELTS Writing Task 2.
-
             </p>
-
             <h3 class="sub-sub-section-heading">17.1. Common Uses of Inversion:</h3>
-
             <ul>
-
                 <li><strong>After Negative Adverbials:</strong> When a negative adverbial phrase (e.g., rarely, seldom, never, hardly, scarcely, no sooner, not only, little, under no circumstances) starts a sentence, the auxiliary verb comes before the subject.
-
                     <div class="example-box"><span class="font-bold">Never before have</span> we witnessed such rapid technological advancements.</div>
-
                     <div class="example-box"><span class="font-bold">Not only does</span> education empower individuals, <span class="font-bold">but it also</span> fosters economic growth.</div>
-
                     <div class="example-box"><span class="font-bold">Hardly had</span> the new policy been implemented <span class="font-bold">when</span> its positive effects became apparent.</div>
-
                 </li>
-
                 <li><strong>After 'Only' + Adverbial Phrase:</strong> When 'only' is followed by an adverbial phrase of time or place at the beginning of a sentence.
-
                     <div class="example-box"><span class="font-bold">Only after extensive research did</span> scientists discover the cause.</div>
-
                     <div class="example-box"><span class="font-bold">Only recently has</span> the government acknowledged the severity of the issue.</div>
-
                 </li>
-
                 <li><strong>In Conditional Sentences (without 'if'):</strong> To make conditional sentences more formal or concise, especially in academic writing.
-
                     <div class="example-box"><span class="font-bold">Had the government invested</span> more in infrastructure, the crisis would have been averted. (Equivalent to: If the government had invested...)</div>
-
                     <div class="example-box"><span class="font-bold">Should any difficulties arise</span>, please contact the support team. (Equivalent to: If any difficulties should arise...)</div>
-
                     <div class="example-box"><span class="font-bold">Were the public more aware</span>, they would demand greater action. (Equivalent to: If the public were more aware...)</div>
-
                 </li>
-
                 <li><strong>After 'So' / 'Such' (for emphasis):</strong>
-
                     <div class="example-box"><span class="font-bold">So significant was</span> the impact that it transformed society.</div>
-
                     <div class="example-box"><span class="font-bold">Such is</span> the complexity of the problem that a single solution is insufficient.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">17.2. Common Errors with Inversion:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Forgetting to invert the subject and auxiliary verb.</p>
-
                 <p class="line-through">Never before we have witnessed such changes.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Never before have we witnessed</span> such changes.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect auxiliary verb choice or tense in inversion.</p>
-
                 <p class="line-through">Little they know about the consequences.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Little do they know</span> about the consequences.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Overuse of inversion, making writing sound unnatural or forced.</p>
-
                 <p class="line-through">In the classroom are many students.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> There are many students in the classroom. (Simple is often better).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Using inversion appropriately can demonstrate a high level of grammatical flexibility and control, contributing to a higher band score. However, it should be used sparingly and naturally, primarily in Task 2 essays for emphasis or to introduce a formal tone. Do not force inversion where it does not sound natural, as errors will be penalized. Focus on mastering the common structures with negative adverbials and conditional inversions.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="subjunctive-mood" class="mb-8">
-
             <h2 class="section-heading">18. Subjunctive Mood</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 The subjunctive mood is used to express wishes, suggestions, demands, or hypothetical situations that are contrary to fact. While less common in everyday English, its correct use in formal or academic writing, particularly in IELTS Task 2, can demonstrate a sophisticated command of grammar.
-
             </p>
-
             <h3 class="sub-sub-section-heading">18.1. Uses of the Subjunctive Mood:</h3>
-
             <ul>
-
                 <li><strong>After Verbs of Suggestion, Demand, Recommendation, Request, Importance:</strong> Used in 'that' clauses following verbs such as 'suggest', 'recommend', 'demand', 'insist', 'propose', 'request', 'advise', 'urge', 'require', 'order', 'ask'. The verb in the 'that' clause is in its base form (without 's' for third person singular) and does not change for tense.
-
                     <div class="example-box">It is essential that the government <span class="font-bold">take</span> immediate action. (Not 'takes')</div>
-
                     <div class="example-box">We recommend that he <span class="font-bold">be</span> present at the meeting. (Not 'is')</div>
-
                     <div class="example-box">They insisted that the project <span class="font-bold">be completed</span> by Friday.</div>
-
                 </li>
-
                 <li><strong>After Impersonal Expressions of Importance/Necessity:</strong> Used after expressions like 'it is vital that', 'it is important that', 'it is crucial that', 'it is necessary that'.
-
                     <div class="example-box">It is crucial that public funds <span class="font-bold">be allocated</span> efficiently.</div>
-
                     <div class="example-box">It is necessary that every citizen <span class="font-bold">understand</span> their rights.</div>
-
                 </li>
-
                 <li><strong>In Hypothetical Situations (with 'wish' or 'if only'):</strong> To express a wish or a hypothetical situation that is contrary to present reality.
-
                     <div class="example-box">I wish I <span class="font-bold">were</span> able to solve this problem. (Not 'was')</div>
-
                     <div class="example-box">If only he <span class="font-bold">were</span> here to see this.</div>
-
                 </li>
-
                 <li><strong>In Fixed Expressions:</strong>
-
                     <div class="example-box"><span class="font-bold">God save</span> the Queen! <span class="font-bold">Come what may</span>.</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">18.2. Common Errors with Subjunctive Mood:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Not using the base form of the verb in 'that' clauses.</p>
-
                 <p class="line-through">It is important that he studies harder.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> It is important that he <span class="font-bold">study</span> harder.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Using 'was' instead of 'were' in hypothetical 'wish' clauses.</p>
-
                 <p class="line-through">I wish I was taller.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> I wish I <span class="font-bold">were</span> taller.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>While not an everyday structure, the subjunctive mood can be effectively used in IELTS Task 2 to express recommendations or importance in a formal academic tone. For example, when discussing solutions: "It is imperative that governments take a proactive stance on environmental protection." Using it accurately will contribute to a higher grammatical range score, but ensure you are confident in its application to avoid errors.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="participle-clauses" class="mb-8">
-
             <h2 class="section-heading">19. Participle Clauses</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Participle clauses are non-finite clauses that begin with a present participle (-ing form), a past participle (-ed form), or a perfect participle (having + past participle). They are used to shorten sentences, combine ideas, and add detail, demonstrating a sophisticated grammatical range in IELTS Writing. They typically describe an action that happens at the same time as, or immediately before, the main clause's action.
-
             </p>
-
             <h3 class="sub-sub-section-heading">19.1. Types of Participle Clauses:</h3>
-
             <ul>
-
                 <li><strong>Present Participle Clauses (-ing):</strong> Used when the action in the participle clause happens at the same time as the main verb, or immediately before it, and the subject is the same as the main clause.
-
                     <div class="example-box"><span class="font-bold">Walking along the street</span>, I saw an old friend. (I was walking and I saw)</div>
-
                     <div class="example-box"><span class="font-bold">Realizing the urgency of the situation</span>, the committee took immediate action. (They realized, then took action)</div>
-
                     <div class="example-box">The government introduced new policies, <span class="font-bold">aiming to reduce unemployment</span>. (The government introduced and aimed)</div>
-
                 </li>
-
                 <li><strong>Past Participle Clauses (-ed):</strong> Used when the participle clause has a passive meaning, and the subject is the same as the main clause.
-
                     <div class="example-box"><span class="font-bold">Motivated by the desire for change</span>, the public demanded reforms. (The public was motivated)</div>
-
                     <div class="example-box"><span class="font-bold">Published in 2023</span>, the report highlights key environmental trends. (The report was published)</div>
-
                 </li>
-
                 <li><strong>Perfect Participle Clauses (Having + Past Participle):</strong> Used when the action in the participle clause happened before the action in the main clause, and the subject is the same.
-
                     <div class="example-box"><span class="font-bold">Having completed the research</span>, the scientists presented their findings. (First they completed, then they presented)</div>
-
                     <div class="example-box"><span class="font-bold">Having been neglected for years</span>, the infrastructure required significant repairs. (First it was neglected, then it required repairs)</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">19.2. Common Errors with Participle Clauses:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Dangling participle (the subject of the participle clause is different from the subject of the main clause).</p>
-
                 <p class="line-through">Walking down the street, the trees were beautiful.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Walking down the street</span>, <span class="font-bold">I noticed</span> the beautiful trees. (The subject 'I' is doing the walking).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect tense or form of the participle.</p>
-
                 <p class="line-through">Having complete the task, I went home.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> <span class="font-bold">Having completed</span> the task, I went home.</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 3: Overuse or unnatural placement, making sentences difficult to read.</p>
-
                 <p class="line-through">The government, implementing new policies, aims to reduce unemployment.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The government is implementing new policies <span class="font-bold">to reduce unemployment</span>. (Simpler structure is often better). <br> <span class="font-bold">Alternatively:</span> The government introduced new policies, <span class="font-bold">aiming to reduce unemployment</span>. (If the participle clause adds explanatory detail).</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Participle clauses are an excellent way to demonstrate grammatical complexity and conciseness, contributing to a higher band score. They allow you to combine information efficiently. Use them to add descriptive detail or to show cause-and-effect relationships. However, ensure that the subject of the participle clause is clearly the same as the subject of the main clause to avoid dangling participles, which are a common error.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="nominalization" class="mb-8">
-
             <h2 class="section-heading">20. Nominalization</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed">
-
                 Nominalization is the process of forming a noun from a verb or an adjective. It is a common feature of formal and academic writing, allowing writers to express complex ideas concisely and objectively. While overuse can make writing dense, strategic nominalization can enhance the academic tone and grammatical sophistication of your IELTS essays.
-
             </p>
-
             <h3 class="sub-sub-section-heading">20.1. How Nominalization Works:</h3>
-
             <p>It involves transforming verbs or adjectives into nouns, often with suffixes like -tion, -ment, -ance, -ence, -al, -sis, -ity, -ness.</p>
-
             <ul>
-
                 <li><strong>Verb to Noun:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Verb:</span> The government <span class="font-bold">decided</span> to implement new policies.</li>
-
                         <li><span class="font-bold">Nominalization:</span> The <span class="font-bold">decision</span> to implement new policies was made by the government.</li>
-
                     </ul>
-
                     <ul>
-
                         <li><span class="font-bold">Verb:</span> Companies <span class="font-bold">produce</span> goods.</li>
-
                         <li><span class="font-bold">Nominalization:</span> The <span class="font-bold">production</span> of goods is increasing.</li>
-
                     </ul>
-
                 </li>
-
                 <li><strong>Adjective to Noun:</strong>
-
                     <ul>
-
                         <li><span class="font-bold">Adjective:</span> The issue is <span class="font-bold">important</span>.</li>
-
                         <li><span class="font-bold">Nominalization:</span> The <span class="font-bold">importance</span> of the issue cannot be overstated.</li>
-
                     </ul>
-
                     <ul>
-
                         <li><span class="font-bold">Adjective:</span> The economy is <span class="font-bold">stable</span>.</li>
-
                         <li><span class="font-bold">Nominalization:</span> The <span class="font-bold">stability</span> of the economy is crucial.</li>
-
                     </ul>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">20.2. Benefits in IELTS Writing:</h3>
-
             <ul>
-
                 <li><strong>Conciseness:</strong> It can condense information, making sentences more compact.
-
                     <div class="example-box">Instead of: "When people consume too much sugar, it leads to health problems." <br> Use: "<span class="font-bold">Excessive sugar consumption</span> leads to health problems."</div>
-
                 </li>
-
                 <li><strong>Formality and Objectivity:</strong> Nominalized forms often sound more formal and objective, suitable for academic writing.
-
                     <div class="example-box">Instead of: "I believe that governments should intervene." <br> Use: "<span class="font-bold">Government intervention</span> is often considered necessary."</div>
-
                 </li>
-
                 <li><strong>Focus on Concepts:</strong> It shifts the focus from the actor/action to the concept itself.
-
                     <div class="example-box">Instead of: "Scientists researched the phenomenon." <br> Use: "<span class="font-bold">Research</span> into the phenomenon was conducted by scientists."</div>
-
                 </li>
-
             </ul>
-
             <h3 class="sub-sub-section-heading">20.3. Common Errors with Nominalization:</h3>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 1: Overuse, leading to dense or unclear sentences.</p>
-
                 <p class="line-through">The implementation of the decision for the reduction of pollution was a requirement.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The <span class="font-bold">decision to reduce pollution was implemented</span> as a requirement. (More direct).</p>
-
             </div>
-
             <div class="common-error-box">
-
                 <p class="font-bold">Error 2: Incorrect noun form or awkward phrasing.</p>
-
                 <p class="line-through">The develop of technology is fast.</p>
-
                 <p class="correction"><span class="font-bold">Correction:</span> The <span class="font-bold">development</span> of technology is fast.</p>
-
             </div>
-
             <div class="tip-box">
-
                 <p class="font-bold">IELTS Tip:</p>
-
                 <p>Nominalization is a sophisticated grammatical feature that can enhance your lexical resource and grammatical range. It is particularly useful for summarizing ideas or presenting general statements in a formal, academic style. Practice transforming verbs and adjectives into their noun forms. However, use it judiciously; aim for clarity and conciseness, not just complexity. A balanced approach is best.</p>
-
             </div>
-
         </section>
-
-
 
         <section id="ai-sentence-enhancer" class="mb-8 ai-feature-container">
-
             <h2 class="section-heading ai-feature-header">21. AI-Powered Sentence Enhancer ✨</h2>
-
             <p class="text-lg text-slate-700 leading-relaxed mb-4">
-
                 Input a simple sentence below, and our AI will rephrase it using more complex grammatical structures, helping you achieve a higher Band Score in IELTS Writing. It will also provide an explanation of the grammatical changes.
-
             </p>
-
             <textarea id="sentenceInput" class="ai-textarea" placeholder="Type your sentence here (e.g., 'People like to use phones.')."></textarea>
-
             <div class="flex justify-center">
-
                 <button id="enhanceButton" class="ai-button">
-
                     Enhance Sentence ✨
-
                 </button>
-
             </div>
-
             <div id="outputArea" class="ai-output-area relative">
-
                 <div id="loadingIndicator" class="ai-loading-indicator">Processing...</div>
-
                 <h4 id="enhancedSentenceHeader" class="hidden">Enhanced Sentence:</h4>
-
                 <p id="enhancedSentence" class="text-lg"></p>
-
                 <h4 id="explanationHeader" class="hidden mt-4">Explanation of Changes:</h4>
-
                 <p id="explanation" class="text-base"></p>
-
             </div>
-
         </section>
-
-
 
     </div>
 
-
-
-    <script>
-
-        // Function to toggle the navigation sidebar
-
-        function toggleNav() {
-
-            const sidebar = document.getElementById("mySidebar");
-
-            const body = document.body;
-
-            if (sidebar.style.width === "250px") {
-
-                sidebar.style.width = "0";
-
-                document.querySelector('.container').style.marginLeft = "auto";
-
-                body.classList.remove('no-scroll'); // Allow scrolling
-
-            } else {
-
-                sidebar.style.width = "250px";
-
-                // Adjust content margin to prevent overlap on larger screens
-
-                if (window.innerWidth > 768) { // Example breakpoint for larger screens
-
-                    document.querySelector('.container').style.marginLeft = "260px";
-
-                }
-
-                body.classList.add('no-scroll'); // Prevent scrolling
-
-            }
-
-        }
-
-
-
-        // Close sidebar if clicked outside (optional, but good UX)
-
-        window.onclick = function(event) {
-
-            const sidebar = document.getElementById("mySidebar");
-
-            const hamburger = document.querySelector(".hamburger-menu");
-
-            if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.style.width === "250px") {
-
-                toggleNav();
-
-            }
-
-        }
-
-
-
-        // Smooth scrolling for internal links
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-            anchor.addEventListener('click', function (e) {
-
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-
-                    behavior: 'smooth'
-
-                });
-
-            });
-
-        });
-
-
-
-        // Function to number headings and subheadings
-
-        function numberHeadings() {
-
-            let sectionCounters = {
-
-                h2: 0,
-
-                h3: 0,
-
-                h4: 0
-
-            };
-
-            const sections = document.querySelectorAll('section');
-
-
-
-            sections.forEach((section, index) => {
-
-                // Reset sub-counters for each new H2 section
-
-                sectionCounters.h3 = 0;
-
-                sectionCounters.h4 = 0;
-
-
-
-                const h2 = section.querySelector('h2');
-
-                if (h2) {
-
-                    sectionCounters.h2++;
-
-                    h2.innerHTML = `${sectionCounters.h2}. ${h2.textContent.replace(/^\d+\.\s*/, '')}`; // Remove old number if exists
-
-                    // Update sidebar link text
-
-                    const sidebarLink = document.querySelector(`.nav-sidebar a[href="#${section.id}"]`);
-
-                    if (sidebarLink) {
-
-                        sidebarLink.textContent = h2.textContent;
-
-                    }
-
-                }
-
-
-
-                const h3s = section.querySelectorAll('h3');
-
-                h3s.forEach(h3 => {
-
-                    sectionCounters.h3++;
-
-                    sectionCounters.h4 = 0; // Reset h4 counter for each new h3
-
-                    h3.innerHTML = `${sectionCounters.h2}.${sectionCounters.h3}. ${h3.textContent.replace(/^\d+\.\d+\.\s*/, '')}`;
-
-                });
-
-
-
-                const h4s = section.querySelectorAll('h4');
-
-                h4s.forEach(h4 => {
-
-                    sectionCounters.h4++;
-
-                    h4.innerHTML = `${sectionCounters.h2}.${sectionCounters.h3}.${sectionCounters.h4}. ${h4.textContent.replace(/^\d+\.\d+\.\d+\.\s*/, '')}`;
-
-                });
-
-            });
-
-        }
-
-
-
-        // Call numbering function on page load
-
-        document.addEventListener('DOMContentLoaded', numberHeadings);
-
-
-
-
-
-        // --- Emoji Tense Visualization Logic ---
-
-        const emojiTimelineDisplay = document.getElementById('emoji-timeline-display');
-
-        const currentTenseNameDisplay = document.getElementById('current-tense-name');
-
-        const currentTenseDescriptionDisplay = document.getElementById('current-tense-description');
-
-
-
-        const tensesData = {
-
-            "present-simple": {
-
-                name: "Present Simple",
-
-                description: "Used for habits, routines, facts, and general truths. Actions that are permanent, habitual, or universally true. Visualized as a continuous loop of actions.",
-
-                emoji: "⬅️---📍---🔄---📍---➡️"
-
-            },
-
-            "present-continuous": {
-
-                name: "Present Continuous",
-
-                description: "For actions happening now, temporary situations, or trends developing at the moment of speaking. Emphasizes the ongoing nature of an action. Visualized as an action currently in progress.",
-
-                emoji: "⬅️---⏳---➡️"
-
-            },
-
-            "present-perfect": {
-
-                name: "Present Perfect",
-
-                description: "For actions that started in the past and continue to the present, or actions completed at an unspecified time in the past with a present result. Connects a past event to the present.",
-
-                emoji: "⬅️📍---➡️"
-
-            },
-
-            "present-perfect-continuous": {
-
-                name: "Present Perfect Continuous",
-
-                description: "For actions that started in the past and are still continuing, emphasizing duration up to the present moment. Visualized as an ongoing action that began in the past and extends to now.",
-
-                emoji: "⬅️⏳---➡️"
-
-            },
-
-            "past-simple": {
-
-                name: "Past Simple",
-
-                description: "For completed actions at a specific time in the past. Describes a single, finished action or state in the past. Visualized as a single point in the past.",
-
-                emoji: "⬅️---📍---"
-
-            },
-
-            "past-continuous": {
-
-                name: "Past Continuous",
-
-                description: "For actions that were ongoing at a specific time in the past, often interrupted by another action. Useful for setting context or background. Visualized as an ongoing action in the past.",
-
-                emoji: "⬅️---⏳---📍"
-
-            },
-
-            "past-perfect": {
-
-                name: "Past Perfect",
-
-                description: "For an action that happened before another action in the past. Essential for showing sequence of past events. Visualized as an action completed before another past action.",
-
-                emoji: "⏪📍---⬅️📍---"
-
-            },
-
-            "past-perfect-continuous": {
-
-                name: "Past Perfect Continuous",
-
-                description: "For an action that was ongoing for a period before another past action. Emphasizes duration leading up to a past point. Visualized as an ongoing action that finished before a specific past point.",
-
-                emoji: "⏪⏳---⬅️📍---"
-
-            },
-
-            "future-simple": {
-
-                name: "Future Simple (will/be going to)",
-
-                description: "For predictions, promises, or spontaneous decisions. Used when discussing future trends or solutions. Visualized as a single point in the future.",
-
-                emoji: "---📍➡️"
-
-            },
-
-            "future-continuous": {
-
-                name: "Future Continuous",
-
-                description: "For actions that will be ongoing at a specific time in the future. Useful for describing future scenarios or overlapping future events. Visualized as an action that will be in progress in the future.",
-
-                emoji: "---⏳➡️"
-
-            },
-
-            "future-perfect": {
-
-                name: "Future Perfect",
-
-                description: "For an action that will be completed before a specific time or another action in the future. Highly useful for projections. Visualized as an action that will be completed by a future deadline.",
-
-                emoji: "---📍🏁➡️"
-
-            },
-
-            "future-perfect-continuous": {
-
-                name: "Future Perfect Continuous",
-
-                description: "For an action that will have been ongoing for a period before a specific time in the future. Emphasizes duration leading up to a future point. Visualized as an ongoing action that will culminate by a future deadline.",
-
-                emoji: "---⏳🏁➡️"
-
-            }
-
-        };
-
-
-
-        // Function to update the tense visualization
-
-        function updateTenseVisualization(tenseId) {
-
-            const data = tensesData[tenseId];
-
-
-
-            // Remove active class from all rows
-
-            document.querySelectorAll('.tense-table-row').forEach(row => {
-
-                row.classList.remove('active');
-
-            });
-
-
-
-            if (tenseId) {
-
-                // Add active class to the clicked row
-
-                const activeRow = document.querySelector(`.tense-table-row[data-tense-id="${tenseId}"]`);
-
-                if (activeRow) {
-
-                    activeRow.classList.add('active');
-
-                }
-
-            }
-
-
-
-            if (data) {
-
-                currentTenseNameDisplay.textContent = data.name;
-
-                currentTenseDescriptionDisplay.textContent = data.description;
-
-                emojiTimelineDisplay.textContent = data.emoji; // Display the emoji string
-
-            } else {
-
-                currentTenseNameDisplay.textContent = "Click a tense in the table below to see its emoji timeline!";
-
-                currentTenseDescriptionDisplay.textContent = "";
-
-                emojiTimelineDisplay.textContent = "⬅️ Past | Now | Future ➡️"; // Default emoji timeline
-
-            }
-
-        }
-
-
-
-        // Add event listeners to table rows for tense visualization
-
-        document.querySelectorAll('.tense-table-row').forEach(row => {
-
-            row.addEventListener('click', function() {
-
-                const tenseId = this.dataset.tenseId;
-
-                updateTenseVisualization(tenseId);
-
-            });
-
-        });
-
-
-
-        // Initialize emoji visualization on window load
-
-        window.onload = function () {
-
-            updateTenseVisualization(null); // Set initial state
-
-        }
-
-
-
-        // --- AI-Powered Sentence Enhancer Logic ---
-
-        const sentenceInput = document.getElementById('sentenceInput');
-
-        const enhanceButton = document.getElementById('enhanceButton');
-
-        const outputArea = document.getElementById('outputArea');
-
-        const loadingIndicator = document.getElementById('loadingIndicator');
-
-        const enhancedSentenceHeader = document.getElementById('enhancedSentenceHeader');
-
-        const enhancedSentence = document.getElementById('enhancedSentence');
-
-        const explanationHeader = document.getElementById('explanationHeader');
-
-        const explanation = document.getElementById('explanation');
-
-
-
-        enhanceButton.addEventListener('click', async () => {
-
-            const userSentence = sentenceInput.value.trim();
-
-
-
-            if (!userSentence) {
-
-                enhancedSentence.textContent = "Please enter a sentence to enhance.";
-
-                explanation.textContent = "";
-
-                enhancedSentenceHeader.classList.remove('hidden');
-
-                explanationHeader.classList.add('hidden');
-
-                return;
-
-            }
-
-
-
-            // Clear previous output and show loading
-
-            enhancedSentence.textContent = "";
-
-            explanation.textContent = "";
-
-            enhancedSentenceHeader.classList.add('hidden');
-
-            explanationHeader.classList.add('hidden');
-
-            loadingIndicator.classList.add('active');
-
-            enhanceButton.disabled = true; // Disable button during processing
-
-
-
-            try {
-
-                // Construct the prompt for the LLM
-
-                const prompt = `You are an expert English grammar tutor specializing in IELTS Band 8+ writing.
-
-                Enhance the following simple sentence by rephrasing it to use more complex and varied grammatical structures, suitable for academic writing.
-
-                After providing the enhanced sentence, explain the specific grammatical changes you made (e.g., "Used a relative clause," "Incorporated a participle phrase," "Applied inversion," "Used nominalization," "Changed simple sentence to complex sentence").
-
-                Format your response as a JSON object with two keys: "enhancedSentence" and "explanation".
-
-                
-
-                Example Input: "People like to use phones."
-
-                Example Output:
-
-                {
-
-                  "enhancedSentence": "The widespread adoption of mobile phones has significantly influenced human interaction patterns.",
-
-                  "explanation": "1. Used nominalization: 'People like to use phones' became 'The widespread adoption of mobile phones'.\n2. Incorporated an adverb of degree: 'significantly'.\n3. Changed a simple verb phrase to a more formal and descriptive one: 'influenced human interaction patterns'."
-
-                }
-
-
-
-                Now, enhance this sentence: "${userSentence}"`;
-
-
-
-                let chatHistory = [];
-
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-
-
-                const payload = {
-
-                    contents: chatHistory,
-
-                    generationConfig: {
-
-                        responseMimeType: "application/json",
-
-                        responseSchema: {
-
-                            type: "OBJECT",
-
-                            properties: {
-
-                                "enhancedSentence": { "type": "STRING" },
-
-                                "explanation": { "type": "STRING" }
-
-                            },
-
-                            "propertyOrdering": ["enhancedSentence", "explanation"]
-
-                        }
-
-                    }
-
-                };
-
-
-
-                const apiKey = ""; // Leave as is, Canvas will inject
-
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-
-
-                const response = await fetch(apiUrl, {
-
-                    method: 'POST',
-
-                    headers: { 'Content-Type': 'application/json' },
-
-                    body: JSON.stringify(payload)
-
-                });
-
-
-
-                const result = await response.json();
-
-
-
-                if (result.candidates && result.candidates.length > 0 &&
-
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-
-                    result.candidates[0].content.parts.length > 0) {
-
-                    const jsonString = result.candidates[0].content.parts[0].text;
-
-                    const parsedResponse = JSON.parse(jsonString);
-
-
-
-                    enhancedSentence.textContent = parsedResponse.enhancedSentence;
-
-                    explanation.textContent = parsedResponse.explanation;
-
-                    enhancedSentenceHeader.classList.remove('hidden');
-
-                    explanationHeader.classList.remove('hidden');
-
-                } else {
-
-                    enhancedSentence.textContent = "Could not enhance the sentence. Please try again.";
-
-                    explanation.textContent = "Unexpected API response structure.";
-
-                    enhancedSentenceHeader.classList.remove('hidden');
-
-                    explanationHeader.classList.remove('hidden');
-
-                }
-
-
-
-            } catch (error) {
-
-                console.error("Error enhancing sentence:", error);
-
-                enhancedSentence.textContent = "An error occurred while enhancing the sentence.";
-
-                explanation.textContent = "Please check your network connection or try again later.";
-
-                enhancedSentenceHeader.classList.remove('hidden');
-
-                explanationHeader.classList.remove('hidden');
-
-            } finally {
-
-                loadingIndicator.classList.remove('active');
-
-                enhanceButton.disabled = false; // Re-enable button
-
-            }
-
-        });
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
